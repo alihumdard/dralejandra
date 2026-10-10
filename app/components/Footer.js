@@ -26,6 +26,14 @@ export default function Footer() {
             </ul>
           </nav>
 
+          <nav className="footer__col" aria-label="Sígueme">
+            <h3 className="footer__col-title">Sígueme</h3>
+            <ul>
+              <li><a href="#" aria-label="Instagram">Instagram <span className="footer__arrow">↗</span></a></li>
+              <li><a href="#" aria-label="LinkedIn">LinkedIn <span className="footer__arrow">↗</span></a></li>
+            </ul>
+          </nav>
+
           <div className="footer__col" aria-label="Contacto">
             <h3 className="footer__col-title">Contacto</h3>
             <ul>
@@ -34,14 +42,6 @@ export default function Footer() {
               <li>Ciudad, País</li>
             </ul>
           </div>
-
-          <nav className="footer__col" aria-label="Sígueme">
-            <h3 className="footer__col-title">Sígueme</h3>
-            <ul>
-              <li><a href="#" aria-label="Instagram">Instagram <span className="footer__arrow">↗</span></a></li>
-              <li><a href="#" aria-label="LinkedIn">LinkedIn <span className="footer__arrow">↗</span></a></li>
-            </ul>
-          </nav>
         </div>
 
         <div className="footer__bottom">
