@@ -1,4 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
+
 const TICKER = "MEDICINA FAMILIAR Y DE PRECISIÓN · MICROBIOTA · MEDICINA PREDICTIVA · LONGEVIDAD · ";
 
 const SINTOMAS = [
@@ -24,7 +25,7 @@ export default function Home() {
     <main>
       {/* HERO */}
       <section className="hero" id="inicio">
-        <img className="hero__bg" src="/images/hero.png" alt="Dra. Alejandra Stivaletta" />
+        <Image className="hero__bg" src="/images/hero.png" alt="Dra. Alejandra Stivaletta" fill sizes="100vw" quality={90} priority />
         <div className="hero__shade" />
         <div className="ticker" aria-hidden="true">
           <div className="ticker__track">
