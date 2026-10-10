@@ -25,7 +25,10 @@ export default function Home() {
     <main>
       {/* HERO */}
       <section className="hero" id="inicio">
-        <Image className="hero__bg" src="/images/hero.png" alt="Dra. Alejandra Stivaletta" fill sizes="100vw" quality={90} priority />
+        {/* Desktop image */}
+        <Image className="hero__bg hero__bg--desktop" src="/images/hero.png" alt="Dra. Alejandra Stivaletta" fill sizes="100vw" quality={90} priority />
+        {/* Mobile image */}
+        <Image className="hero__bg hero__bg--mobile" src="/images/hero-mobile.jpg" alt="Dra. Alejandra Stivaletta" fill sizes="100vw" quality={90} priority />
         <div className="hero__shade" />
         <div className="ticker" aria-hidden="true">
           <div className="ticker__track">

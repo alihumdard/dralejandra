@@ -91,6 +91,10 @@
                                        object-fit: cover;
                                        object-position: 60% center;
                                    }
+
+                                   .hero__bg--mobile {
+                                       display: none;
+                                   }
                                    
                                    .hero__shade {
                                        position: absolute;
@@ -336,8 +340,12 @@
                                    }
                                    
                                    @media (max-width: 767px) {
-                                       .hero__bg {
-                                           object-position: 66% center;
+                                       .hero__bg--desktop {
+                                           display: none;
+                                       }
+                                       .hero__bg--mobile {
+                                           display: block;
+                                           object-position: center center;
                                        }
                                        .hero__shade {
                                            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 35%, rgba(20, 15, 5, 0.55) 100%);
