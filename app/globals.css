@@ -109,7 +109,7 @@ section {
     align-items: center;
     overflow: hidden;
     background: linear-gradient(90deg, rgba(255, 232, 160, 0.85), rgba(255, 240, 190, 0.45) 60%, rgba(255, 240, 190, 0.2));
-    color: #f9efc9;
+    color: #fff;
     font-size: clamp(11px, 1.15vw, 17px);
     letter-spacing: 0.02em;
     white-space: nowrap;
@@ -434,9 +434,12 @@ section {
     }
     .step__n {
         font-size: 16px;
+        display: inline-block;
+        margin-right: 8px;
     }
     .step h3 {
         font-size: 20px;
+        display: inline-block;
     }
     .method__foot {
         flex-direction: column;
@@ -1048,5 +1051,11 @@ section {
     .method .method__foot .pill {
         font-size: clamp(12px, 1.36vw, 24px);
         padding: 0.62em 1.5em;
+    }
+    .footer__col:nth-child(2) {
+        text-align: center;
+    }
+    .footer__col:nth-child(2) ul {
+        align-items: center;
     }
 }
