@@ -549,7 +549,7 @@
                                        text-transform: uppercase;
                                        font-size: clamp(11px, 0.9vw, 14px);
                                        letter-spacing: 0.04em;
-                                       color: #fff;
+                                       color: #1a1a0a;
                                        text-decoration: none;
                                        position: relative;
                                    }
@@ -571,6 +571,14 @@
                                    
                                    .header__cta {
                                        flex-shrink: 0;
+                                       color: #1a1a0a;
+                                       border-color: #1a1a0a;
+                                   }
+
+                                   .header__cta:hover,
+                                   .header__cta:focus-visible {
+                                       color: #fff !important;
+                                       border-color: #fff;
                                    }
                                    
                                    .header__hamburger {
