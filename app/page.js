@@ -104,8 +104,8 @@ const TESTIMONIOS = [
 ];
 
 const JOURNAL = [
-  ["GUT HEALTH", "La importancia de una microbiota saludable.", "Cómo influye en tu energía, inmunidad y bienestar general."],
-  ["HORMONAL HEALTH", "Perimenopausia: qué cambia y cómo acompañarlo.", "Síntomas, herramientas y un enfoque integral."],
+  ["SALUD INTESTINAL", "La importancia de una microbiota saludable.", "Cómo influye en tu energía, inmunidad y bienestar general."],
+  ["SALUD HORMONAL", "Perimenopausia: qué cambia y cómo acompañarlo.", "Síntomas, herramientas y un enfoque integral."],
   ["LONGEVIDAD", "Metabolismo lento: señales y estrategias.", "Cómo identificarlo y qué podés hacer."],
 ];
 
@@ -407,7 +407,7 @@ export default function Home() {
           <div className="journal__head">
             <p className="journal__eyebrow">
               <span className="journal__eyebrow-line" />
-              Journal / Contenido
+              Artículos / Contenido
             </p>
             <h2>Conocimiento para tu salud</h2>
           </div>

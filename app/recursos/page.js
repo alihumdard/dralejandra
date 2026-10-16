@@ -1,28 +1,28 @@
 import "../st-pages.css";
 
 export const metadata = {
-  title: "Recursos · Journal | Dra. Alejandra Stivaletta",
+  title: "Recursos · Contenido | Dra. Alejandra Stivaletta",
   description:
-    "Artículos, videos, guías, newsletter y masterclasses sobre salud digestiva, hormonal, metabolismo, inflamación, longevidad, medicina preventiva, microbiota y salud de la mujer.",
+    "Artículos, videos, guías, boletines y clases magistrales sobre salud digestiva, hormonal, metabolismo, inflamación, longevidad, medicina preventiva, microbiota y salud de la mujer.",
 };
 
 const CATEGORIAS = [
-  "Gut Health",
-  "Hormonal Health",
-  "Metabolism",
-  "Inflammation",
-  "Longevity",
-  "Preventive Medicine",
-  "Microbiome",
-  "Women's Health",
+  "Salud intestinal",
+  "Salud hormonal",
+  "Metabolismo",
+  "Inflamación",
+  "Longevidad",
+  "Medicina preventiva",
+  "Microbiota",
+  "Salud de la mujer",
 ];
 
 const TIPOS = [
   ["01.", "Artículos", "Lecturas clínicas y contemporáneas sobre los temas que más consultan las pacientes."],
   ["02.", "Videos", "Explicaciones breves de conceptos clave, en el mismo lenguaje de la consulta."],
   ["03.", "Guías", "Material de referencia para ordenar información antes o después de una valoración."],
-  ["04.", "Newsletter", "Actualizaciones por email: nuevos contenidos, sin ruido y sin promesas."],
-  ["05.", "Masterclasses", "Sesiones profundas en vivo sobre ejes completos: digestión, hormonas, longevidad."],
+  ["04.", "Boletín", "Actualizaciones por email: nuevos contenidos, sin ruido y sin promesas."],
+  ["05.", "Clases magistrales", "Sesiones profundas en vivo sobre ejes completos: digestión, hormonas, longevidad."],
 ];
 
 export default function RecursosPage() {
@@ -34,13 +34,13 @@ export default function RecursosPage() {
         <div className="sp-hero__inner">
           <p className="sp-eyebrow">
             <span className="sp-eyebrow__line" />
-            Recursos · Journal
+            Recursos · Contenido
           </p>
           <h1>Información médica, bien explicada.</h1>
           <p className="sp-hero__sub">
             Un espacio de contenido clínico, contemporáneo y cercano: lo mismo
             que trabajamos en consulta, pero en formato lectura, video o
-            masterclass.
+            clase magistral.
           </p>
         </div>
       </section>
@@ -91,12 +91,12 @@ export default function RecursosPage() {
               <span className="sp-eyebrow__line" />
               En camino
             </p>
-            <h2>El journal se está preparando.</h2>
+            <h2>Los artículos se están preparando.</h2>
             <p className="sp-sec__lead">
               Estamos cerrando los primeros artículos y guías con el mismo
               criterio clínico de la consulta: ciencia bien explicada, sin
-              tono pseudocientífico y sin promesas fáciles. Suscribite a la
-              newsletter para recibir el lanzamiento.
+              tono pseudocientífico y sin promesas fáciles. Suscribite al
+              boletín para recibir el lanzamiento.
             </p>
           </div>
           <div className="sp-box">

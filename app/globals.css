@@ -1169,8 +1169,8 @@
                                         }
                                         /* 3. Problem section: button */
                                         .problem .problem__btn {
-                                            font-size: clamp(12px, 1.36vw, 24px);
-                                            padding: 0.62em 1.5em;
+                                            font-size: clamp(11px, 1.05vw, 17px);
+                                            padding: 0.58em 1.3em;
                                             right: clamp(20px, 3vw, 60px);
                                         }
                                         /* 4. Method section: steps row and bottom row */
@@ -2611,7 +2611,21 @@
                                     }
                                     
                                     .contacto__field input,
-                                    .contacto__field select,
+                                    .contacto__field select {
+                                        background: rgba(212, 158, 156, 0.09);
+                                        border: 1px solid rgba(255, 241, 207, 0.14);
+                                        color: var(--cream);
+                                        font-family: var(--font-sans), sans-serif;
+                                        font-size: clamp(13px, 1vw, 15px);
+                                        padding: 16px 18px;
+                                        border-radius: 999px;
+                                        outline: none;
+                                        transition: border-color 0.25s, background 0.25s;
+                                        width: 100%;
+                                        box-sizing: border-box;
+                                        -webkit-appearance: none;
+                                        appearance: none;
+                                    }
                                     .contacto__field textarea {
                                         background: rgba(212, 158, 156, 0.09);
                                         border: 1px solid rgba(255, 241, 207, 0.14);
@@ -2619,11 +2633,17 @@
                                         font-family: var(--font-sans), sans-serif;
                                         font-size: clamp(13px, 1vw, 15px);
                                         padding: 16px 18px;
-                                        border-radius: 2px;
+                                        border-radius: 24px;
                                         outline: none;
                                         transition: border-color 0.25s, background 0.25s;
                                         width: 100%;
                                         box-sizing: border-box;
+                                    }
+                                    .contacto__field select {
+                                        background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23beae6a' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+                                        background-repeat: no-repeat;
+                                        background-position: right 18px center;
+                                        padding-right: 44px;
                                     }
                                     
                                     .contacto__field input::placeholder,
@@ -2767,5 +2787,45 @@
     .header__cta {
         font-size: 0.68rem;
         padding: 0.6em 1em;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero__btns,
+    .paraquien__btns,
+    .sobre__btns,
+    .mp-hero__btns,
+    .mp-cta__btns,
+    .sp-hero__btns,
+    .sp-cta__btns {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+    .hero__btns .pill,
+    .paraquien__btns .pill,
+    .sobre__btns .pill,
+    .comotrabajamos__btn,
+    .ctafinal__btn,
+    .contacto__submit,
+    .footer__cta,
+    .mp-hero__btns .pill,
+    .mp-cta__btns .pill,
+    .sp-hero__btns .pill,
+    .sp-cta__btns .pill,
+    .sp-form__submit {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .problem__btn {
+        width: auto;
+        font-size: 0.78rem;
+        padding: 0.75em 1.2em;
+    }
+    .footer__cta {
+        align-self: stretch;
     }
 }

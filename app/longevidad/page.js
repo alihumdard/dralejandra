@@ -108,7 +108,7 @@ export default function LongevidadPage() {
           </h2>
           <ul className="mp-topics__tags">
             {[
-              "Healthspan",
+              "Vida saludable",
               "Energía",
               "Función metabólica",
               "Composición corporal",
