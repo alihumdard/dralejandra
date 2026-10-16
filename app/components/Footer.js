@@ -1,4 +1,12 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+
 export default function Footer() {
+  const pathname = usePathname();
+  const onHome = pathname === "/";
+  const p = onHome ? "" : "/";
+
   return (
     <footer id="contacto" className="footer" role="contentinfo">
       <div className="footer__inner">
@@ -11,7 +19,7 @@ export default function Footer() {
             <h2 className="footer__title">Dra. Alejandra Stivaletta</h2>
             <p className="footer__tagline">Tu salud no se entiende por partes.</p>
           </div>
-          <a href="#contacto" className="pill footer__cta">Solicitar una valoración</a>
+          <a href="/solicitar-valoracion" className="pill footer__cta">Solicitar una valoración</a>
         </div>
 
         <div className="footer__divider" />
@@ -20,9 +28,29 @@ export default function Footer() {
           <nav className="footer__col" aria-label="Navegación">
             <h3 className="footer__col-title">Navegación</h3>
             <ul>
-              <li><a href="#inicio">Inicio</a></li>
-              <li><a href="#metodo">El método</a></li>
-              <li><a href="#contacto">Contacto</a></li>
+              <li><a href={onHome ? "#inicio" : "/"}>Inicio</a></li>
+              <li><a href={`${p}#metodo`}>El método</a></li>
+              <li><a href={`${p}#para-quien`}>Para quién</a></li>
+              <li><a href={`${p}#contacto`}>Contacto</a></li>
+              <li><a href="/programa">Programa</a></li>
+              <li><a href="/valoracion-inicial">Valoración inicial</a></li>
+              <li><a href="/alejandra">Dra. Alejandra</a></li>
+              <li><a href="/recursos">Recursos</a></li>
+              <li><a href="/faq">Preguntas frecuentes</a></li>
+              <li><a href="/casos">Casos y experiencias</a></li>
+              <li><a href="/equipo">Equipo</a></li>
+              <li><a href="/solicitar-valoracion">Solicitar valoración</a></li>
+            </ul>
+          </nav>
+
+          <nav className="footer__col" aria-label="Áreas">
+            <h3 className="footer__col-title">Áreas</h3>
+            <ul>
+              <li><a href="/medicina-de-precision">Medicina de precisión</a></li>
+              <li><a href="/salud-digestiva-y-microbiota">Salud digestiva y microbiota</a></li>
+              <li><a href="/medicina-predictiva">Medicina predictiva</a></li>
+              <li><a href="/longevidad">Longevidad</a></li>
+              <li><a href="/valoracion-inicial">Valoración inicial</a></li>
             </ul>
           </nav>
 
@@ -46,7 +74,7 @@ export default function Footer() {
 
         <div className="footer__bottom">
           <p className="footer__copyright">© 2026 Dra. Alejandra Stivaletta. Todos los derechos reservados.</p>
-          <a href="#inicio" className="footer__back-top">Volver arriba ↑</a>
+          <a href={onHome ? "#inicio" : "/"} className="footer__back-top">Volver arriba ↑</a>
         </div>
       </div>
     </footer>

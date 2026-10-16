@@ -2,12 +2,13 @@
 
 import { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
+import { usePathname } from "next/navigation";
 
 const AREAS_ITEMS = [
-  { href: "#areas", label: "Medicina de Precisión" },
-  { href: "#areas", label: "Salud digestiva y microbiota" },
-  { href: "#areas", label: "Medicina predictiva" },
-  { href: "#areas", label: "Longevidad" },
+  { href: "/medicina-de-precision", label: "Medicina de Precisión" },
+  { href: "/salud-digestiva-y-microbiota", label: "Salud digestiva y microbiota" },
+  { href: "/medicina-predictiva", label: "Medicina predictiva" },
+  { href: "/longevidad", label: "Longevidad" },
 ];
 
 export default function Header() {
@@ -16,6 +17,9 @@ export default function Header() {
   const [areasOpen, setAreasOpen] = useState(false);
   const [mobileAreasOpen, setMobileAreasOpen] = useState(false);
   const areasRef = useRef(null);
+  const pathname = usePathname();
+  const onHome = pathname === "/";
+  const p = onHome ? "" : "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -41,9 +45,21 @@ export default function Header() {
   const closeMobile = () => setMobileOpen(false);
 
   const navLinks = [
-    { href: "#como-trabajamos", label: "Cómo trabajamos" },
-    { href: "#alejandra", label: "Dra. Alejandra" },
-    { href: "#contacto", label: "Contacto" },
+    { href: `${p}#metodo`, label: "El método" },
+    { href: `${p}#para-quien`, label: "Para quién" },
+  ];
+
+  const postLinks = [
+    { href: "/programa", label: "Programa" },
+    { href: "/alejandra", label: "Dra. Alejandra" },
+  ];
+
+  const drawerExtraTop = [
+    { href: onHome ? "#inicio" : "/", label: "Inicio" },
+  ];
+
+  const drawerExtraBottom = [
+    { href: "/recursos", label: "Recursos" },
   ];
 
   const drawerContent = (
@@ -53,13 +69,23 @@ export default function Header() {
         <div className="header__drawer-header">
           <span className="header__drawer-logo">Dra. Alejandra Stivaletta</span>
           <button className="header__drawer-close" onClick={closeMobile} aria-label="Cerrar menú">
-            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="#8a8a55" strokeWidth="1.5" strokeLinecap="round" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="#848152" strokeWidth="1.5" strokeLinecap="round" aria-hidden="true">
               <path d="M3 3 L19 19 M19 3 L3 19" />
             </svg>
           </button>
         </div>
-        <nav className="header__drawer-nav">
+        <nav className="header__drawer-nav" aria-label="Navegación móvil">
           <ul>
+            {drawerExtraTop.map((link) => (
+              <li key={link.href}>
+                <a href={link.href} className="header__drawer-link" onClick={closeMobile}>{link.label}</a>
+              </li>
+            ))}
+            {navLinks.map((link, index) => (
+              <li key={link.href} style={{ transitionDelay: `${(index + 1) * 80}ms` }}>
+                <a href={link.href} className="header__drawer-link" onClick={closeMobile}>{link.label}</a>
+              </li>
+            ))}
             <li>
               <button
                 className="header__drawer-link header__drawer-areas-btn"
@@ -80,14 +106,19 @@ export default function Header() {
                 </ul>
               )}
             </li>
-            {navLinks.map((link, index) => (
-              <li key={link.href} style={{ transitionDelay: `${(index + 1) * 80}ms` }}>
+            {postLinks.map((link) => (
+              <li key={link.href}>
+                <a href={link.href} className="header__drawer-link" onClick={closeMobile}>{link.label}</a>
+              </li>
+            ))}
+            {drawerExtraBottom.map((link) => (
+              <li key={link.href}>
                 <a href={link.href} className="header__drawer-link" onClick={closeMobile}>{link.label}</a>
               </li>
             ))}
           </ul>
         </nav>
-        <a href="#contacto" className="pill header__drawer-cta" onClick={closeMobile}>
+        <a href="/solicitar-valoracion" className="pill header__drawer-cta" onClick={closeMobile}>
           Solicitar una valoración
         </a>
       </aside>
@@ -97,7 +128,7 @@ export default function Header() {
   return (
     <>
       <header className={`header ${scrolled ? "header--scrolled" : ""}`} role="banner">
-        <a href="#inicio" className="header__logo">
+        <a href={onHome ? "#inicio" : "/"} className="header__logo">
           Dra. Alejandra Stivaletta
         </a>
 
@@ -129,10 +160,15 @@ export default function Header() {
                 <a href={link.href} className="header__nav-link">{link.label}</a>
               </li>
             ))}
+            {postLinks.map((link) => (
+              <li key={link.href} className="header__nav-item">
+                <a href={link.href} className="header__nav-link">{link.label}</a>
+              </li>
+            ))}
           </ul>
         </nav>
 
-        <a href="#contacto" className="pill header__cta">
+        <a href="/solicitar-valoracion" className="pill header__cta">
           Solicitar una valoración
         </a>
 
