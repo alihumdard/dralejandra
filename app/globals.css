@@ -973,7 +973,7 @@
                                         flex-shrink: 0;
                                         align-self: flex-end;
                                         background: var(--gold);
-                                        color: var(--dark);
+                                        color: #fff1cf;
                                         border-color: var(--gold);
                                         box-shadow: none;
                                         font-weight: 500;
@@ -2293,7 +2293,7 @@
                                     
                                     .ctafinal__btn {
                                         background: var(--gold);
-                                        color: var(--dark);
+                                        color: #fff1cf;
                                         border-color: var(--gold);
                                         box-shadow: none;
                                         font-weight: 500;
