@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 const TICKER = "MEDICINA FAMILIAR Y DE PRECISIÓN · MICROBIOTA · MEDICINA PREDICTIVA · LONGEVIDAD · ";
 
@@ -133,6 +133,7 @@ function FAQ({ pregunta, respuesta }) {
 }
 
 export default function Home() {
+  const edadRef = useRef(null);
   return (
     <main>
       {/* HERO */}
@@ -460,9 +461,21 @@ export default function Home() {
                   <label>Nombre y apellido</label>
                   <input type="text" name="nombre" required placeholder="Tu nombre completo" />
                 </div>
-                <div className="contacto__field">
-                  <label>Edad</label>
-                  <input type="number" name="edad" required placeholder="Tu edad" />
+                <div className="contacto__field contacto__field--number">
+                  <label htmlFor="edad">Edad</label>
+                  <input id="edad" ref={edadRef} type="number" name="edad" min="1" max="110" required placeholder="Tu edad" />
+                  <span className="contacto__spin">
+                    <button type="button" aria-label="Aumentar edad" onClick={() => edadRef.current?.stepUp()}>
+                      <svg width="11" height="7" viewBox="0 0 11 7" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <path d="M1.5 5.5 L5.5 1.5 L9.5 5.5" />
+                      </svg>
+                    </button>
+                    <button type="button" aria-label="Disminuir edad" onClick={() => edadRef.current?.stepDown()}>
+                      <svg width="11" height="7" viewBox="0 0 11 7" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <path d="M1.5 1.5 L5.5 5.5 L9.5 1.5" />
+                      </svg>
+                    </button>
+                  </span>
                 </div>
               </div>
               <div className="contacto__row contacto__row--2">

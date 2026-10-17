@@ -48,10 +48,10 @@ export default function ProgramaPage() {
   return (
     <div className="sp">
       {/* HERO */}
-      <section className="sp-hero sp-hero--dark">
-        <img className="sp-hero__glow" src="/images/degradado-cream.png" alt="" aria-hidden="true" />
+      <section className="sp-hero">
+        <img className="sp-hero__glow" src="/images/degradado-olive.png" alt="" aria-hidden="true" />
         <div className="sp-hero__inner">
-          <p className="sp-eyebrow sp-eyebrow--gold">
+          <p className="sp-eyebrow">
             <span className="sp-eyebrow__line" />
             Programa
           </p>

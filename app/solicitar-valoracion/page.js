@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import "../st-pages.css";
 
 export default function SolicitarValoracionPage() {
+  const edadRef = useRef(null);
   const [sent, setSent] = useState(false);
 
   const onSubmit = (e) => {
@@ -14,10 +15,10 @@ export default function SolicitarValoracionPage() {
   return (
     <div className="sp">
       {/* HERO */}
-      <section className="sp-hero sp-hero--dark">
-        <img className="sp-hero__glow" src="/images/degradado-cream.png" alt="" aria-hidden="true" />
+      <section className="sp-hero">
+        <img className="sp-hero__glow" src="/images/degradado-olive.png" alt="" aria-hidden="true" />
         <div className="sp-hero__inner">
-          <p className="sp-eyebrow sp-eyebrow--gold">
+          <p className="sp-eyebrow">
             <span className="sp-eyebrow__line" />
             Solicitar valoración
           </p>
@@ -60,9 +61,21 @@ export default function SolicitarValoracionPage() {
                 <label htmlFor="nombre">Nombre</label>
                 <input id="nombre" name="nombre" type="text" required autoComplete="name" />
               </div>
-              <div className="sp-form__field">
+              <div className="sp-form__field sp-form__field--number">
                 <label htmlFor="edad">Edad</label>
-                <input id="edad" name="edad" type="number" min="18" max="110" required />
+                <input id="edad" ref={edadRef} name="edad" type="number" min="18" max="110" required />
+                <span className="sp-form__spin">
+                  <button type="button" aria-label="Aumentar edad" onClick={() => edadRef.current?.stepUp()}>
+                    <svg width="11" height="7" viewBox="0 0 11 7" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <path d="M1.5 5.5 L5.5 1.5 L9.5 5.5" />
+                    </svg>
+                  </button>
+                  <button type="button" aria-label="Disminuir edad" onClick={() => edadRef.current?.stepDown()}>
+                    <svg width="11" height="7" viewBox="0 0 11 7" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <path d="M1.5 1.5 L5.5 5.5 L9.5 1.5" />
+                    </svg>
+                  </button>
+                </span>
               </div>
               <div className="sp-form__field">
                 <label htmlFor="email">Correo electrónico</label>
