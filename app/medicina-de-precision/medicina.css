@@ -152,15 +152,31 @@
   z-index: 0;
 }
 
+/* Heading and body stack down the left; the points list sits beside them */
 .mp-manifesto__inner {
   position: relative;
   z-index: 1;
   max-width: 1440px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: clamp(40px, 6vw, 96px);
+  grid-template-columns: 1.15fr 1fr;
+  column-gap: clamp(40px, 6vw, 96px);
+  row-gap: clamp(24px, 3vw, 40px);
   align-items: start;
+}
+
+.mp-manifesto__left,
+.mp-manifesto__right {
+  grid-column: 1;
+}
+
+.mp-manifesto__right {
+  max-width: 62ch;
+}
+
+.mp-points {
+  grid-column: 2;
+  grid-row: 1 / span 2;
 }
 
 .mp-manifesto h2 {
@@ -180,9 +196,7 @@
 }
 
 .mp-points {
-  border-top: 2px solid rgba(132, 129, 82, 0.35);
   padding-top: clamp(18px, 2vw, 26px);
-  margin-top: clamp(28px, 3.5vw, 44px);
 }
 
 .mp-points__label {
@@ -499,6 +513,26 @@ a.mp-areas__card {
 /* ── RESPONSIVE ── */
 
 @media (max-width: 1100px) {
+  /* Not enough width for a side column — stack the points under the copy */
+  .mp-manifesto__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .mp-manifesto__left,
+  .mp-manifesto__right,
+  .mp-points {
+    grid-column: 1;
+  }
+
+  .mp-points {
+    grid-row: auto;
+    margin-top: clamp(8px, 1.5vw, 16px);
+  }
+
+  .mp-manifesto__right {
+    max-width: 68ch;
+  }
+
   .mp-hero {
     grid-template-columns: 1fr;
     min-height: 0;
@@ -510,11 +544,6 @@ a.mp-areas__card {
 
   .mp-hero__photo {
     aspect-ratio: 16 / 10;
-  }
-
-  .mp-manifesto__inner {
-    grid-template-columns: 1fr;
-    gap: clamp(32px, 5vw, 56px);
   }
 
   .mp-areas__grid {
@@ -739,12 +768,16 @@ a.mp-areas__card {
 }
 
 @media (max-width: 767px) {
+  /* Shorter on phones, and nothing is cropped: the frame keeps the
+     image's own ratio, so contain fills it edge to edge. */
   .mp-hero__photo {
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 1800 / 2200;
+    max-height: 58vh;
   }
 
   .mp-hero__photo img {
-    object-position: center top;
+    object-fit: contain;
+    object-position: center;
   }
 
   .mp-hero__glow {

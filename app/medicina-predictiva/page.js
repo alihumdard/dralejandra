@@ -84,14 +84,14 @@ export default function MedicinaPredictivaPage() {
               ahí se decide, con información y con tiempo. No hace falta
               estudiarlo todo: hace falta estudiar lo que cambia una decisión.
             </p>
-            <div className="mp-points">
-              <p className="mp-points__label">Qué permite</p>
-              <ul>
-                {PUNTOS.map((p) => (
-                  <li key={p}>{p}</li>
-                ))}
-              </ul>
-            </div>
+          </div>
+          <div className="mp-points">
+            <p className="mp-points__label">Qué permite</p>
+            <ul>
+              {PUNTOS.map((p) => (
+                <li key={p}>{p}</li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>

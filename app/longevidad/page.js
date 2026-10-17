@@ -84,14 +84,14 @@ export default function LongevidadPage() {
               revisa en el tiempo. Sin modas: con evidencia, seguimiento y
               ajustes concretos.
             </p>
-            <div className="mp-points">
-              <p className="mp-points__label">Qué permite</p>
-              <ul>
-                {PUNTOS.map((p) => (
-                  <li key={p}>{p}</li>
-                ))}
-              </ul>
-            </div>
+          </div>
+          <div className="mp-points">
+            <p className="mp-points__label">Qué permite</p>
+            <ul>
+              {PUNTOS.map((p) => (
+                <li key={p}>{p}</li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>

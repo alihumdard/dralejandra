@@ -83,14 +83,14 @@ export default function SaludDigestivaPage() {
               cómo duermes, qué medicación tomás, cómo estás. Los estudios se
               piden cuando van a aportar una respuesta, no para acumular datos.
             </p>
-            <div className="mp-points">
-              <p className="mp-points__label">Qué permite</p>
-              <ul>
-                {PUNTOS.map((p) => (
-                  <li key={p}>{p}</li>
-                ))}
-              </ul>
-            </div>
+          </div>
+          <div className="mp-points">
+            <p className="mp-points__label">Qué permite</p>
+            <ul>
+              {PUNTOS.map((p) => (
+                <li key={p}>{p}</li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>

@@ -499,7 +499,7 @@
                                             position: relative;
                                             order: 1;
                                             width: 100%;
-                                            aspect-ratio: 4 / 5;
+                                            aspect-ratio: 1 / 1;
                                             overflow: hidden;
                                         }
                                         .problem__photo img {
@@ -1914,7 +1914,7 @@
                                             flex-direction: column;
                                         }
                                         .sobre__photo {
-                                            aspect-ratio: 4 / 5;
+                                            aspect-ratio: 1 / 1;
                                             position: relative;
                                         }
                                         .sobre__photo img {
@@ -2260,8 +2260,10 @@
                                     }
                                     
                                     .faq__list {
-                                        display: flex;
-                                        flex-direction: column;
+                                        display: grid;
+                                        grid-template-columns: 1fr 1fr;
+                                        column-gap: clamp(32px, 4vw, 72px);
+                                        align-items: start;
                                     }
                                     
                                     .faq__item {
@@ -2353,6 +2355,10 @@
                                     @media (max-width: 900px) {
                                         .faq__left h2 {
                                             font-size: clamp(22px, 4vw, 38px);
+                                        }
+                                        /* Two columns of questions need the width */
+                                        .faq__list {
+                                            grid-template-columns: 1fr;
                                         }
                                     }
                                     
@@ -2638,11 +2644,10 @@
                                     .comotrabajamos__nota {
                                         font-family: var(--font-sans), sans-serif;
                                         font-size: clamp(14px, 1.1vw, 17px);
-                                        color: rgba(132, 129, 82, 0.9);
+                                        color: var(--olive-light);
                                         line-height: 1.6;
                                         max-width: 68ch;
                                         margin: clamp(32px, 4vw, 52px) 0 20px;
-                                        font-style: italic;
                                     }
                                     
                                     .comotrabajamos__wa {

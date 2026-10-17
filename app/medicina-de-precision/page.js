@@ -82,14 +82,14 @@ export default function MedicinaDePrecisionPage() {
               longevidad— dentro de una misma mirada médica, con seguimiento en
               el tiempo.
             </p>
-            <div className="mp-points">
-              <p className="mp-points__label">Qué permite</p>
-              <ul>
-                {PUNTOS.map((p) => (
-                  <li key={p}>{p}</li>
-                ))}
-              </ul>
-            </div>
+          </div>
+          <div className="mp-points">
+            <p className="mp-points__label">Qué permite</p>
+            <ul>
+              {PUNTOS.map((p) => (
+                <li key={p}>{p}</li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>

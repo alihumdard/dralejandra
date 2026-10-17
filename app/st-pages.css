@@ -304,9 +304,10 @@
 }
 .sp-manifesto__lines {
   display: grid;
-  gap: 0;
-  max-width: 640px;
-  margin: 0 auto;
+  grid-template-columns: 1fr 1fr;
+  column-gap: clamp(32px, 4vw, 72px);
+  row-gap: 0;
+  margin: 0;
   text-align: left;
 }
 .sp-manifesto__lines li {
@@ -328,6 +329,12 @@
   flex-shrink: 0;
   position: relative;
   top: -0.35em;
+}
+@media (max-width: 900px) {
+  /* Two columns leave the lines too narrow below this width */
+  .sp-manifesto__lines {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Testimonios (casos) */
@@ -446,7 +453,7 @@
 /* Formulario */
 .sp-form {
   max-width: 760px;
-  margin: 0 auto;
+  margin: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(18px, 2vw, 26px);
@@ -694,7 +701,15 @@
     border-radius: 24px;
     padding: 1em 1.3em;
   }
-  .sp-portrait__img { aspect-ratio: 4 / 5; }
+  /* Shorter on phones, whole portrait visible */
+  .sp-portrait__img {
+    aspect-ratio: 1800 / 2133;
+    max-height: 58vh;
+  }
+  .sp-portrait__img img {
+    object-fit: contain;
+    object-position: center;
+  }
   .sp-hero__btns,
   .sp-cta__btns { flex-direction: column; align-items: flex-start; }
   .sp-cta__inner { align-items: flex-start; text-align: left; }

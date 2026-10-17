@@ -128,7 +128,7 @@ export default function Header() {
   return (
     <>
       <header className={`header ${scrolled ? "header--scrolled" : ""}`} role="banner">
-        <a href={onHome ? "#inicio" : "/"} className="header__logo">
+        <a href="/" className="header__logo">
           Dra. Alejandra Stivaletta
         </a>
 
