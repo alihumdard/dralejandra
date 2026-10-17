@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Reveal from "./components/Reveal";
 
 const serif = localFont({
   src: "./fonts/DentonCondensedTest-Regular.otf",
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
         <Header />
         <main>{children}</main>
         <Footer />
+        <Reveal />
       </body>
     </html>
   );

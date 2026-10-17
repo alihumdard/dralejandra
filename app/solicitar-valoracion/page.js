@@ -33,7 +33,7 @@ export default function SolicitarValoracionPage() {
       {/* FORM */}
       <section className="sp-sec">
         <img className="sp-sec__glow sp-sec__glow--right" src="/images/degradado-olive.png" alt="" aria-hidden="true" />
-        <div className="sp-sec__inner">
+        <div className="sp-sec__inner reveal">
           <p className="sp-eyebrow">
             <span className="sp-eyebrow__line" />
             Formulario
@@ -65,7 +65,7 @@ export default function SolicitarValoracionPage() {
                 <input id="edad" name="edad" type="number" min="18" max="110" required />
               </div>
               <div className="sp-form__field">
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email">Correo electrónico</label>
                 <input id="email" name="email" type="email" required autoComplete="email" />
               </div>
               <div className="sp-form__field">
@@ -123,7 +123,7 @@ export default function SolicitarValoracionPage() {
 
       {/* DESPUÉS DE ENVIAR */}
       <section className="sp-sec sp-sec--pink">
-        <div className="sp-sec__inner sp-split">
+        <div className="sp-sec__inner sp-split reveal">
           <div>
             <p className="sp-eyebrow">
               <span className="sp-eyebrow__line" />

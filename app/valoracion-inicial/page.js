@@ -40,7 +40,7 @@ export default function ValoracionInicialPage() {
 
       {/* PARA QUÉ SIRVE */}
       <section className="sp-sec">
-        <div className="sp-sec__inner sp-split">
+        <div className="sp-sec__inner sp-split reveal">
           <div>
             <p className="sp-eyebrow">
               <span className="sp-eyebrow__line" />
@@ -63,7 +63,7 @@ export default function ValoracionInicialPage() {
             <h3>Valoración inicial</h3>
             <p className="sp-box__price">
               220 €
-              <small>Sesión única · presencial u online</small>
+              <small>Sesión única · presencial o en línea</small>
             </p>
             <p>
               Incluye la revisión completa de tu caso y la definición de
@@ -81,7 +81,7 @@ export default function ValoracionInicialPage() {
       {/* DESPUÉS DE LA VALORACIÓN */}
       <section className="sp-sec sp-sec--dark">
         <img className="sp-sec__glow sp-sec__glow--right" src="/images/degradado-cream.png" alt="" aria-hidden="true" />
-        <div className="sp-sec__inner">
+        <div className="sp-sec__inner reveal">
           <p className="sp-eyebrow sp-eyebrow--gold">
             <span className="sp-eyebrow__line" />
             Después
@@ -121,7 +121,7 @@ export default function ValoracionInicialPage() {
         <img className="sp-cta__bg" src="/images/alejandra-cta.jpg" alt="" aria-hidden="true" />
         <div className="sp-cta__shade" />
         <img className="sp-cta__glow" src="/images/degradado-cream.png" alt="" aria-hidden="true" />
-        <div className="sp-cta__inner">
+        <div className="sp-cta__inner reveal">
           <p className="sp-eyebrow sp-eyebrow--gold">
             <span className="sp-eyebrow__line" />
             Empezar

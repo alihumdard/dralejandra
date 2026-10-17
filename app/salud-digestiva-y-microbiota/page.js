@@ -63,7 +63,7 @@ export default function SaludDigestivaPage() {
       {/* 02 — CONCEPTO */}
       <section className="mp-manifesto">
         <img className="mp-manifesto__glow" src="/images/degradado-olive.png" alt="" aria-hidden="true" />
-        <div className="mp-manifesto__inner">
+        <div className="mp-manifesto__inner reveal">
           <div className="mp-manifesto__left">
             <p className="mp-eyebrow mp-eyebrow--wine">
               <span className="mp-eyebrow__line" />
@@ -98,7 +98,7 @@ export default function SaludDigestivaPage() {
       {/* 03 — QUÉ ANALIZO */}
       <section className="mp-analiza">
         <img className="mp-analiza__glow" src="/images/degradado-cream.png" alt="" aria-hidden="true" />
-        <div className="mp-analiza__inner">
+        <div className="mp-analiza__inner reveal">
           <div className="mp-analiza__head">
             <p className="mp-eyebrow">
               <span className="mp-eyebrow__line" />
@@ -123,7 +123,7 @@ export default function SaludDigestivaPage() {
 
       {/* 03.5 — CONEXIONES */}
       <section className="mp-conn">
-        <div className="mp-conn__inner">
+        <div className="mp-conn__inner reveal">
           <p className="mp-eyebrow mp-eyebrow--wine">
             <span className="mp-eyebrow__line" />
             La conversación interna
@@ -167,7 +167,7 @@ export default function SaludDigestivaPage() {
 
       {/* 04 — EL PARAGUAS / ÁREAS */}
       <section className="mp-areas" id="areas">
-        <div className="mp-areas__inner">
+        <div className="mp-areas__inner reveal">
           <div className="mp-areas__head">
             <p className="mp-eyebrow">
               <span className="mp-eyebrow__line" />
@@ -202,7 +202,7 @@ export default function SaludDigestivaPage() {
         <img className="mp-cta__bg" src="/images/alejandra-cta.jpg" alt="" aria-hidden="true" />
         <div className="mp-cta__shade" />
         <img className="mp-cta__glow" src="/images/degradado-cream.png" alt="" aria-hidden="true" />
-        <div className="mp-cta__inner">
+        <div className="mp-cta__inner reveal">
           <p className="mp-eyebrow">
             <span className="mp-eyebrow__line" />
             Solicitar valoración

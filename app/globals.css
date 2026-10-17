@@ -14,12 +14,12 @@
                                         /* ── SPACING ── */
                                         --pad: clamp(20px, 6.2vw, 120px);
                                         /* ── TYPOGRAPHY — sizes in rem ── */
-                                        --text-label: 0.6875rem;
-                                        /* 11px */
-                                        --text-xs: 0.8125rem;
-                                        /* 13px */
-                                        --text-sm: 0.875rem;
-                                        /* 14px */
+                                        --text-label: clamp(0.75rem, 0.85vw, 0.875rem);
+                                        /* 12 → 14px (eyebrows, numbering) */
+                                        --text-xs: clamp(0.8125rem, 0.9vw, 0.9375rem);
+                                        /* 13 → 15px */
+                                        --text-sm: clamp(0.875rem, 1vw, 1rem);
+                                        /* 14 → 16px */
                                         --text-base: 1rem;
                                         /* 16px */
                                         --text-md: 1.125rem;
@@ -44,6 +44,56 @@
                                     
                                     html {
                                         scroll-behavior: smooth;
+                                    }
+
+                                    /* Anchor targets clear the fixed header */
+                                    [id] {
+                                        scroll-margin-top: calc(clamp(56px, 5vw, 80px) + 16px);
+                                    }
+
+                                    /* Scroll reveal — only arms once JS confirms support,
+                                       so content is never hidden without it */
+                                    .reveal-ready .reveal {
+                                        opacity: 0;
+                                        transform: translateY(18px);
+                                        transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+                                                    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+                                        will-change: opacity, transform;
+                                    }
+
+                                    .reveal-ready .reveal--in {
+                                        opacity: 1;
+                                        transform: none;
+                                    }
+
+                                    /* Keyboard focus — only shows for keyboard users */
+                                    a:focus-visible,
+                                    button:focus-visible,
+                                    input:focus-visible,
+                                    select:focus-visible,
+                                    textarea:focus-visible,
+                                    [tabindex]:focus-visible {
+                                        outline: 2px solid var(--gold);
+                                        outline-offset: 3px;
+                                        border-radius: 4px;
+                                    }
+
+                                    @media (prefers-reduced-motion: reduce) {
+                                        html {
+                                            scroll-behavior: auto;
+                                        }
+                                        *,
+                                        *::before,
+                                        *::after {
+                                            animation-duration: 0.01ms !important;
+                                            animation-iteration-count: 1 !important;
+                                            transition-duration: 0.01ms !important;
+                                            scroll-behavior: auto !important;
+                                        }
+                                        .reveal {
+                                            opacity: 1 !important;
+                                            transform: none !important;
+                                        }
                                     }
                                     
                                     body {
@@ -122,7 +172,7 @@
                                         width: 100%;
                                         height: 100%;
                                         object-fit: cover;
-                                        object-position: 60% center;
+                                        object-position: 72% center;
                                     }
                                     
                                     .hero__bg--mobile {
@@ -267,14 +317,17 @@
                                         margin-top: 4px;
                                         list-style: none;
                                         font-size: clamp(16px, 1.3vw, 24px);
-                                        line-height: 1.5;
+                                        line-height: 1.6;
                                     }
-                                    
+
+                                    .problem li {
+                                        display: flex;
+                                        gap: 0.6em;
+                                    }
+
                                     .problem li::before {
                                         content: "•";
-                                        display: inline-block;
-                                        width: 1.3em;
-                                        margin-left: 0.4em;
+                                        flex: 0 0 auto;
                                     }
                                     
                                     .problem__btn {
@@ -286,8 +339,8 @@
                                     /* MÉTODO */
                                     
                                     .method {
-                                        min-height: 100svh;
                                         min-height: max(100svh, 600px);
+                                        height: auto;
                                         background: #2a2a1a;
                                     }
                                     
@@ -332,8 +385,9 @@
                                     .steps {
                                         display: grid;
                                         grid-template-columns: repeat(5, 1fr);
-                                        gap: 20px;
-                                        text-align: center;
+                                        gap: clamp(20px, 2.5vw, 40px);
+                                        text-align: left;
+                                        align-items: start;
                                     }
                                     
                                     .step__n {
@@ -349,10 +403,10 @@
                                     }
                                     
                                     .step p {
-                                        margin: 10px auto 0;
-                                        max-width: 14em;
-                                        font-size: clamp(10px, 0.82vw, 14px);
-                                        line-height: 1.25;
+                                        margin: 10px 0 0;
+                                        max-width: 18em;
+                                        font-size: clamp(12px, 0.9vw, 15px);
+                                        line-height: 1.5;
                                     }
                                     
                                     .method__foot {
@@ -376,21 +430,44 @@
                                             row-gap: 32px;
                                         }
                                         .pill {
-                                            font-size: 0.75rem;
+                                            font-size: var(--text-label);
                                         }
                                     }
                                     
                                     @media (max-width: 767px) {
+                                        :root {
+                                            --pad: 24px;
+                                        }
+                                        /* Long Spanish labels must wrap, not overflow */
+                                        .pill {
+                                            white-space: normal;
+                                            text-align: center;
+                                            line-height: 1.3;
+                                            padding: 0.85em 1.4em;
+                                            max-width: 100%;
+                                            color: #fff;
+                                        }
+                                        .header__drawer-cta,
+                                        .footer__cta,
+                                        .contacto__submit,
+                                        .problem__btn {
+                                            color: #fff;
+                                        }
                                         .hero__bg--desktop {
                                             display: none;
                                         }
                                         .hero__bg--mobile {
                                             display: block;
-                                            object-fit: contain;
-                                            object-position: center top;
+                                            object-fit: cover;
+                                            object-position: center 22%;
                                         }
                                         .hero__shade {
-                                            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 35%, rgba(20, 15, 5, 0.55) 100%);
+                                            background: linear-gradient(180deg, rgba(20, 15, 5, 0.45) 0%, rgba(20, 15, 5, 0.1) 28%, rgba(20, 15, 5, 0) 45%, rgba(20, 15, 5, 0.6) 100%);
+                                        }
+                                        .ticker {
+                                            background: rgba(43, 42, 24, 0.9);
+                                            height: 30px;
+                                            font-size: 12px;
                                         }
                                         .hero__inner {
                                             padding-bottom: 28px;
@@ -422,22 +499,21 @@
                                             position: relative;
                                             order: 1;
                                             width: 100%;
-                                            aspect-ratio: 5 / 5.2;
+                                            aspect-ratio: 4 / 5;
                                             overflow: hidden;
                                         }
                                         .problem__photo img {
                                             position: absolute;
-                                            right: 0;
-                                            top: 0;
-                                            width: 262%;
+                                            inset: 0;
+                                            width: 100%;
                                             max-width: none;
                                             height: 100%;
                                             object-fit: cover;
-                                            object-position: right center;
+                                            object-position: center;
                                         }
                                         .problem__text {
                                             order: 2;
-                                            padding: 44px 24px 24px;
+                                            padding: 56px var(--pad) 32px;
                                             background: var(--cream);
                                         }
                                         .problem h2 {
@@ -451,14 +527,14 @@
                                             order: 3;
                                             position: static;
                                             align-self: stretch;
-                                            margin: 0 24px 40px;
+                                            margin: 0 var(--pad) 56px;
                                             text-align: center;
                                             background: rgba(132, 129, 82, 0.9);
                                             border-color: rgba(132, 129, 82, 1);
                                             box-shadow: none;
                                         }
                                         .method__inner {
-                                            padding: 64px 24px 32px;
+                                            padding: 56px var(--pad);
                                             gap: 16px;
                                         }
                                         .method h2 {
@@ -499,6 +575,50 @@
                                         .method__foot .pill {
                                             text-align: center;
                                         }
+
+                                        /* ── Mobile: uniform section rhythm ── */
+                                        .propuesta,
+                                        .paraquien,
+                                        .comotrabajamos,
+                                        .diferencial,
+                                        .areas,
+                                        .testimonios,
+                                        .journal,
+                                        .faq,
+                                        .contacto {
+                                            padding-top: 56px;
+                                            padding-bottom: 56px;
+                                        }
+
+                                        .programa__inner {
+                                            padding-top: 56px;
+                                            padding-bottom: 56px;
+                                            gap: 32px;
+                                        }
+
+                                        .propuesta,
+                                        .paraquien,
+                                        .comotrabajamos,
+                                        .diferencial,
+                                        .programa,
+                                        .areas,
+                                        .testimonios,
+                                        .journal,
+                                        .faq,
+                                        .contacto,
+                                        .sobre,
+                                        .method {
+                                            min-height: 0;
+                                        }
+
+                                        /* Section heads: consistent gap to content */
+                                        .comotrabajamos__head,
+                                        .programa__head,
+                                        .areas__head,
+                                        .journal__head,
+                                        .contacto__head {
+                                            margin-bottom: 28px;
+                                        }
                                     }
                                     /* Crop dark edges from background images */
                                     
@@ -508,11 +628,13 @@
                                         transform-origin: center;
                                     }
                                     
-                                    .problem__photo img {
-                                        transform: scale(1.04);
-                                        transform-origin: center;
+                                    @media (min-width: 768px) {
+                                        .problem__photo img {
+                                            transform: scale(1.04);
+                                            transform-origin: center;
+                                        }
                                     }
-                                    
+
                                     @media (min-width: 768px) {
                                         .hero .pill {
                                             font-size: clamp(11px, 1.2vw, 20px);
@@ -531,9 +653,7 @@
                                             aspect-ratio: 651 / 367;
                                         }
                                         .hero__bg {
-                                            object-position: center bottom;
-                                            transform: scale(1.02);
-                                            transform-origin: center bottom;
+                                            object-position: center center;
                                         }
                                         .hero h1 {
                                             font-size: clamp(40px, 6.95vw, 140px);
@@ -566,7 +686,7 @@
                                         display: flex;
                                         align-items: center;
                                         justify-content: space-between;
-                                        transition: background 0.3s, border-color 0.3s, color 0.3s;
+                                        transition: background 0.25s, border-color 0.25s, color 0.25s;
                                     }
                                     
                                     .header__logo {
@@ -607,7 +727,7 @@
                                         width: 0;
                                         height: 1px;
                                         background: var(--gold);
-                                        transition: width 0.3s;
+                                        transition: width 0.25s;
                                     }
                                     
                                     .header__nav-link:hover::after {
@@ -626,7 +746,7 @@
                                     }
                                     
                                     .header__dropdown-arrow {
-                                        transition: transform 0.2s;
+                                        transition: transform 0.25s;
                                         flex-shrink: 0;
                                     }
                                     
@@ -718,7 +838,7 @@
                                         cursor: pointer;
                                         padding: 0;
                                         z-index: 61;
-                                        transition: opacity 0.3s, visibility 0.3s;
+                                        transition: opacity 0.25s, visibility 0.25s;
                                     }
                                     
                                     .header__hamburger--hidden {
@@ -743,8 +863,21 @@
                                         .header__hamburger {
                                             display: flex;
                                         }
+                                        /* Readable over light hero photos */
+                                        .header__logo {
+                                            text-shadow: 0 1px 10px rgba(20, 15, 5, 0.55),
+                                                         0 0 2px rgba(20, 15, 5, 0.4);
+                                        }
+                                        .header__hamburger-line {
+                                            height: 2px;
+                                            box-shadow: 0 1px 6px rgba(20, 15, 5, 0.5);
+                                        }
+                                        .header--scrolled .header__logo {
+                                            text-shadow: none;
+                                        }
                                         .header--scrolled .header__hamburger-line {
                                             background: var(--olive);
+                                            box-shadow: none;
                                         }
                                     }
                                     
@@ -757,7 +890,7 @@
                                         -webkit-backdrop-filter: blur(2px);
                                         opacity: 0;
                                         pointer-events: none;
-                                        transition: opacity 0.3s;
+                                        transition: opacity 0.25s;
                                     }
                                     
                                     .header__mobile-backdrop[aria-hidden="false"] {
@@ -840,7 +973,7 @@
                                         border-bottom: 1px solid rgba(132, 129, 82, 0.25);
                                         opacity: 0;
                                         transform: translateX(20px);
-                                        transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1), transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), color 0.2s;
+                                        transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1), transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), color 0.25s;
                                     }
                                     
                                     .header__mobile-drawer[aria-modal="true"] .header__drawer-link {
@@ -861,7 +994,7 @@
                                         border-color: var(--rose);
                                         box-shadow: none;
                                         font-weight: 500;
-                                        font-size: 0.75rem;
+                                        font-size: var(--text-label);
                                         padding: 0.95em 1em;
                                         text-align: center;
                                     }
@@ -937,7 +1070,7 @@
                                         align-items: center;
                                         gap: 12px;
                                         font-family: var(--font-sans), "Helvetica Neue", Arial, sans-serif;
-                                        font-size: 0.75rem;
+                                        font-size: var(--text-label);
                                         text-transform: uppercase;
                                         letter-spacing: 0.12em;
                                         color: var(--gold);
@@ -996,13 +1129,13 @@
                                     
                                     .footer__col-title {
                                         font-family: var(--font-sans), "Helvetica Neue", Arial, sans-serif;
-                                        font-size: 0.75rem;
+                                        font-size: var(--text-label);
                                         text-transform: uppercase;
                                         letter-spacing: 0.12em;
                                         color: var(--gold);
                                         font-weight: 500;
                                         margin: 0 0 18px;
-                                        text-align: center;
+                                        text-align: left;
                                     }
                                     
                                     .footer__col ul {
@@ -1012,7 +1145,7 @@
                                         display: flex;
                                         flex-direction: column;
                                         gap: 0;
-                                        align-items: center;
+                                        align-items: flex-start;
                                     }
                                     
                                     .footer__col li {
@@ -1038,7 +1171,7 @@
                                         font-size: 0.9375rem;
                                         color: rgba(255, 241, 207, 0.75);
                                         line-height: 2;
-                                        text-align: center;
+                                        text-align: left;
                                     }
                                     
                                     .footer__arrow {
@@ -1060,7 +1193,7 @@
                                         padding-top: clamp(24px, 3vw, 40px);
                                         border-top: 1px solid rgba(255, 241, 207, 0.18);
                                         font-family: var(--font-sans), "Helvetica Neue", Arial, sans-serif;
-                                        font-size: 0.75rem;
+                                        font-size: var(--text-label);
                                         color: rgba(255, 241, 207, 0.6);
                                     }
                                     
@@ -1070,7 +1203,7 @@
                                     
                                     .footer__back-top {
                                         font-family: var(--font-sans), "Helvetica Neue", Arial, sans-serif;
-                                        font-size: 0.75rem;
+                                        font-size: var(--text-label);
                                         text-transform: uppercase;
                                         letter-spacing: 0.08em;
                                         color: rgba(255, 241, 207, 0.7);
@@ -1087,30 +1220,41 @@
                                     }
                                     
                                     @media (min-width: 768px) {
-                                        .footer__col:nth-child(2),
-                                        .footer__col:nth-child(3) {
-                                            border-left: 1px solid rgba(255, 241, 207, 0.12);
-                                            padding-left: clamp(24px, 3vw, 56px);
+                                        /* Footer columns read as a left-aligned sitemap */
+                                        .footer__grid {
+                                            grid-template-columns: 1.4fr 1.2fr 0.8fr 1.3fr;
+                                            gap: clamp(24px, 3vw, 48px);
                                         }
-                                        .footer__col:nth-child(2) .footer__col-title,
-                                        .footer__col:nth-child(2) ul,
-                                        .footer__col:nth-child(2) li,
-                                        .footer__col:nth-child(2) a {
-                                            text-align: center;
-                                            align-items: center;
-                                            width: 100%;
+                                        .footer__col:nth-child(2),
+                                        .footer__col:nth-child(3),
+                                        .footer__col:nth-child(4) {
+                                            border-left: 1px solid rgba(255, 241, 207, 0.12);
+                                            padding-left: clamp(24px, 3vw, 48px);
+                                        }
+                                        .footer__col-title,
+                                        .footer__col li:not(:has(a)) {
+                                            text-align: left;
+                                        }
+                                        .footer__col ul {
+                                            align-items: flex-start;
+                                        }
+                                        /* Navegación has 12 links — split so columns stay even */
+                                        .footer__col:first-child ul {
+                                            display: grid;
+                                            grid-template-columns: 1fr 1fr;
+                                            column-gap: clamp(16px, 2vw, 32px);
                                         }
                                     }
                                     
                                     @media (max-width: 767px) {
                                         .footer__grid {
-                                            grid-template-columns: 1fr 1fr;
-                                            gap: 32px 24px;
+                                            grid-template-columns: 1fr;
+                                            gap: 28px;
                                             align-items: start;
-                                            justify-content: space-between;
                                         }
                                         .footer__col-title {
                                             text-align: left;
+                                            margin-bottom: 12px;
                                         }
                                         .footer__col ul {
                                             align-items: flex-start;
@@ -1118,18 +1262,34 @@
                                         .footer__col li:not(:has(a)) {
                                             text-align: left;
                                         }
-                                        .footer__col:nth-child(2) {
+                                        .footer__col li {
+                                            line-height: 1.9;
+                                        }
+                                        /* Each column stacks full width, with its links in
+                                           two inner columns — Spanish labels are too long
+                                           for a half-width mobile column */
+                                        .footer__col:first-child ul,
+                                        .footer__col:nth-child(2) ul,
+                                        .footer__col:nth-child(3) ul {
+                                            display: grid;
+                                            grid-template-columns: 1fr 1fr;
+                                            column-gap: 20px;
+                                        }
+                                        .footer__col + .footer__col {
                                             border-left: none;
                                             padding-left: 0;
-                                        }
-                                        .footer__col:nth-child(3) {
                                             border-top: 1px solid rgba(255, 241, 207, 0.12);
-                                            padding-top: 32px;
+                                            padding-top: 24px;
+                                        }
+                                        .footer__col a,
+                                        .footer__col li:not(:has(a)) {
+                                            font-size: 0.875rem;
                                         }
                                         .footer__bottom {
                                             flex-direction: column;
                                             gap: 8px;
                                             text-align: left;
+                                            align-items: flex-start;
                                         }
                                     }
                                     /* Mobile and tablet: button sits on the cream background */
@@ -1186,10 +1346,10 @@
                                             letter-spacing: 0;
                                         }
                                         .method .step p {
-                                            font-size: clamp(11px, 0.98vw, 18px);
-                                            line-height: 1.12;
-                                            max-width: 9em;
-                                            margin: 0.7em auto 0;
+                                            font-size: clamp(13px, 0.95vw, 17px);
+                                            line-height: 1.5;
+                                            max-width: 15em;
+                                            margin: 0.7em 0 0;
                                         }
                                         .method .method__foot p {
                                             font-size: clamp(11px, 1.17vw, 21px);
@@ -1201,21 +1361,6 @@
                                             font-size: clamp(12px, 1.36vw, 24px);
                                             padding: 0.62em 1.5em;
                                         }
-                                        .footer__col:nth-child(2) {
-                                            text-align: center;
-                                        }
-                                        .footer__col:nth-child(2) ul {
-                                            align-items: center;
-                                        }
-                                        .footer__col:nth-child(3) {
-                                            text-align: center;
-                                        }
-                                        /* .footer__col:nth-child(3) {
-                 grid-column: 1 / -1;
-                 border-top: 1px solid rgba(255, 241, 207, 0.12);
-                 padding-top: 32px;
-                 align-items: right;
-             } */
                                     }
                                     /* =========================================
    NEW SECTIONS 04–13
@@ -1235,7 +1380,7 @@
                                         align-items: center;
                                         gap: 12px;
                                         font-family: var(--font-sans), sans-serif;
-                                        font-size: 0.75rem;
+                                        font-size: var(--text-label);
                                         text-transform: uppercase;
                                         letter-spacing: 0.12em;
                                         color: var(--gold);
@@ -1317,7 +1462,7 @@
                                     
                                     .propuesta__sublabel {
                                         font-family: var(--font-sans), sans-serif;
-                                        font-size: 0.6875rem;
+                                        font-size: var(--text-label);
                                         text-transform: uppercase;
                                         letter-spacing: 0.13em;
                                         color: rgba(255, 241, 207, 0.5);
@@ -1344,7 +1489,7 @@
                                         letter-spacing: 0.015em;
                                         line-height: 1;
                                         white-space: nowrap;
-                                        transition: border-color 0.2s, color 0.2s, background 0.2s;
+                                        transition: border-color 0.25s, color 0.25s, background 0.25s;
                                     }
                                     
                                     .propuesta__tags li:hover {
@@ -1405,7 +1550,7 @@
                                         display: flex;
                                         flex-direction: column;
                                         gap: 0;
-                                        transition: border-top-color 0.3s, background 0.3s;
+                                        transition: border-top-color 0.25s, background 0.25s;
                                     }
                                     
                                     .paraquien__card:hover {
@@ -1517,7 +1662,7 @@
                                         gap: 20px;
                                         position: relative;
                                         overflow: hidden;
-                                        transition: border-left-color 0.3s, background 0.3s;
+                                        transition: border-left-color 0.25s, background 0.25s;
                                     }
                                     
                                     .diferencial__item:hover {
@@ -1527,11 +1672,11 @@
                                     
                                     .diferencial__n {
                                         font-family: var(--font-sans), sans-serif;
-                                        font-size: var(--text-label);
+                                        font-size: clamp(13px, 1vw, 16px);
                                         font-weight: 500;
                                         letter-spacing: 0.14em;
                                         color: var(--gold);
-                                        opacity: 0.45;
+                                        opacity: 0.75;
                                     }
                                     
                                     .diferencial__item p {
@@ -1631,7 +1776,7 @@
                                     
                                     .programa__tag {
                                         font-family: var(--font-sans), sans-serif;
-                                        font-size: 0.75rem;
+                                        font-size: var(--text-label);
                                         color: rgba(255, 241, 207, 0.7);
                                         border: 1px solid rgba(255, 241, 207, 0.2);
                                         padding: 6px 16px;
@@ -1761,13 +1906,13 @@
                                     
                                     .sobre__tag {
                                         font-family: var(--font-sans), sans-serif;
-                                        font-size: 0.75rem;
+                                        font-size: var(--text-label);
                                         color: var(--olive);
                                         border: 1px solid rgba(132, 129, 82, 0.35);
                                         padding: 7px 16px;
                                         border-radius: 999px;
                                         text-transform: lowercase;
-                                        transition: border-color 0.2s, color 0.2s;
+                                        transition: border-color 0.25s, color 0.25s;
                                     }
                                     
                                     .sobre__tag:hover {
@@ -1781,8 +1926,14 @@
                                             flex-direction: column;
                                         }
                                         .sobre__photo {
-                                            aspect-ratio: 4/3;
+                                            aspect-ratio: 4 / 5;
                                             position: relative;
+                                        }
+                                        .sobre__photo img {
+                                            object-position: center;
+                                        }
+                                        .sobre__text {
+                                            padding: 56px var(--pad);
                                         }
                                     }
                                     /* 09 — ÁREAS */
@@ -1829,7 +1980,7 @@
                                         border: 1px solid rgba(255, 241, 207, 0.1);
                                         border-top: 2px solid rgba(190, 174, 106, 0.15);
                                         padding: clamp(28px, 3.5vw, 52px) clamp(20px, 2.5vw, 36px);
-                                        transition: border-top-color 0.3s, background 0.3s;
+                                        transition: border-top-color 0.25s, background 0.25s;
                                     }
                                     
                                     .areas__card:hover {
@@ -1918,7 +2069,7 @@
                                         display: flex;
                                         flex-direction: column;
                                         gap: 20px;
-                                        transition: border-top-color 0.3s, background 0.3s;
+                                        transition: border-top-color 0.25s, background 0.25s;
                                     }
                                     
                                     .testimonios__card:hover {
@@ -2021,7 +2172,7 @@
                                         display: flex;
                                         flex-direction: column;
                                         gap: 16px;
-                                        transition: border-color 0.3s, border-top-color 0.3s, background 0.3s;
+                                        transition: border-color 0.25s, border-top-color 0.25s, background 0.25s;
                                     }
                                     
                                     .journal__card:hover {
@@ -2066,7 +2217,7 @@
                                         font-size: var(--text-xs);
                                         color: var(--gold);
                                         text-decoration: none;
-                                        transition: opacity 0.2s;
+                                        transition: opacity 0.25s;
                                     }
                                     
                                     .journal__link:hover {
@@ -2128,7 +2279,7 @@
                                         padding: 20px 0;
                                         cursor: pointer;
                                         user-select: none;
-                                        transition: border-left-color 0.2s, padding-left 0.2s, background 0.2s;
+                                        transition: border-left-color 0.25s, padding-left 0.25s, background 0.25s;
                                         border-left: 2px solid transparent;
                                     }
                                     
@@ -2160,7 +2311,7 @@
                                         font-weight: 500;
                                         color: rgba(255, 241, 207, 0.72);
                                         line-height: 1.45;
-                                        transition: color 0.2s;
+                                        transition: color 0.25s;
                                         flex: 1;
                                     }
                                     
@@ -2185,7 +2336,7 @@
                                         font-size: 1rem;
                                         line-height: 1;
                                         margin-top: 1px;
-                                        transition: background 0.2s, border-color 0.2s, color 0.2s;
+                                        transition: background 0.25s, border-color 0.25s, color 0.25s;
                                     }
                                     
                                     .faq__item--open .faq__icon {
@@ -2392,8 +2543,8 @@
                                     }
                                     
                                     .sobre__btns .pill {
-                                        color: var(--dark-text);
-                                        border-color: var(--dark-text);
+                                        color: #fff;
+                                        border-color: var(--rose);
                                     }
                                     /* 05b — CÓMO TRABAJAMOS */
                                     
@@ -2452,7 +2603,7 @@
                                         display: flex;
                                         flex-direction: column;
                                         gap: 14px;
-                                        transition: border-top-color 0.3s, background 0.3s;
+                                        transition: border-top-color 0.25s, background 0.25s;
                                     }
                                     
 .comotrabajamos__card:hover {
@@ -2490,9 +2641,9 @@
                                     .comotrabajamos__btn {
                                         align-self: flex-start;
                                         margin-top: 12px;
-                                        color: var(--dark-text);
-                                        border-color: rgba(61, 61, 30, 0.35);
-                                        font-size: 0.75rem;
+                                        color: #fff;
+                                        border-color: var(--rose);
+                                        font-size: var(--text-label);
                                     }
                                     
                                     .comotrabajamos__btn:hover {
@@ -2503,14 +2654,16 @@
                                     
                                     .comotrabajamos__nota {
                                         font-family: var(--font-sans), sans-serif;
-                                        font-size: clamp(12px, 0.85vw, 13px);
-                                        color: rgba(132, 129, 82, 0.7);
-                                        margin: clamp(32px, 4vw, 52px) 0 16px;
+                                        font-size: clamp(14px, 1.1vw, 17px);
+                                        color: rgba(132, 129, 82, 0.9);
+                                        line-height: 1.6;
+                                        max-width: 68ch;
+                                        margin: clamp(32px, 4vw, 52px) 0 20px;
                                         font-style: italic;
                                     }
                                     
                                     .comotrabajamos__wa {
-                                        color: var(--dark-text);
+                                        color: #fff;
                                         border-color: rgba(132, 129, 82, 0.5);
                                     }
                                     
@@ -2746,6 +2899,45 @@
                                         color: var(--cream);
                                         border-color: rgba(255, 241, 207, 0.35);
                                     }
+
+                                    .contacto__datos {
+                                        list-style: none;
+                                        margin: 0;
+                                        padding: 0;
+                                        display: flex;
+                                        flex-direction: column;
+                                        gap: 18px;
+                                    }
+
+                                    .contacto__datos li {
+                                        font-family: var(--font-sans), sans-serif;
+                                        font-size: clamp(13px, 0.95vw, 15px);
+                                        color: rgba(255, 241, 207, 0.75);
+                                        line-height: 1.6;
+                                    }
+
+                                    .contacto__datos span {
+                                        display: block;
+                                        font-size: var(--text-label);
+                                        text-transform: uppercase;
+                                        letter-spacing: 0.1em;
+                                        color: rgba(255, 241, 207, 0.45);
+                                        margin-bottom: 4px;
+                                    }
+
+                                    .contacto__datos a {
+                                        color: var(--cream);
+                                        text-decoration: none;
+                                        border-bottom: 1px solid rgba(190, 174, 106, 0.4);
+                                        word-break: break-word;
+                                    }
+
+                                    @media (hover: hover) {
+                                        .contacto__datos a:hover {
+                                            color: var(--gold);
+                                            border-bottom-color: var(--gold);
+                                        }
+                                    }
                                     
                                     @media (max-width: 900px) {
                                         .contacto__cols {
@@ -2806,6 +2998,7 @@
     .paraquien__btns .pill,
     .sobre__btns .pill,
     .comotrabajamos__btn,
+    .comotrabajamos__wa,
     .ctafinal__btn,
     .contacto__submit,
     .footer__cta,

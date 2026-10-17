@@ -58,9 +58,9 @@ const COMO_TRABAJAMOS = [
   {
     id: "packs",
     n: "03.",
-    title: "Packs de consultas",
-    desc: "Los packs están pensados para quienes necesitan un abordaje más ordenado, con seguimiento y una mirada longitudinal del proceso. En lugar de consultas aisladas, permiten trabajar con mayor continuidad y construir un plan más coherente en el tiempo.",
-    btn: "Quiero conocer los packs",
+    title: "Paquetes de consultas",
+    desc: "Los paquetes están pensados para quienes necesitan un abordaje más ordenado, con seguimiento y una mirada longitudinal del proceso. En lugar de consultas aisladas, permiten trabajar con mayor continuidad y construir un plan más coherente en el tiempo.",
+    btn: "Quiero conocer los paquetes",
     href: "#contacto",
   },
   {
@@ -112,7 +112,7 @@ const JOURNAL = [
 const FAQS = [
   ["¿Trabajás únicamente problemas digestivos?", "No. Aunque la salud digestiva y la microbiota son áreas importantes del enfoque, Alejandra también aborda síntomas metabólicos, hormonales e inflamatorios, y procesos de prevención y longevidad."],
   ["¿Necesito tener estudios antes de contactarme?", "No necesariamente. Si ya tenés estudios, el equipo te indicará cómo compartirlos. Si no los tenés, el proceso puede comenzar con tu historia clínica y tu motivo de consulta."],
-  ["¿La atención puede ser online?", "La modalidad depende de las características del caso y de la disponibilidad del servicio."],
+  ["¿La atención puede ser en línea?", "La modalidad depende de las características del caso y de la disponibilidad del servicio."],
   ["¿Puedo hacer solo una consulta?", "En algunos casos puede realizarse una consulta individual. Cuando resulta adecuado, Alejandra prioriza procesos de seguimiento más ordenados y completos."],
   ["¿Qué pasa después de completar el formulario?", "El equipo revisará tu solicitud y se pondrá en contacto para orientarte sobre el siguiente paso."],
   ["¿Los estudios, tests o suplementos están incluidos?", "No necesariamente. Su necesidad se define individualmente; cuando corresponda, secretaría informará los presupuestos después de la valoración."],
@@ -137,7 +137,7 @@ export default function Home() {
     <main>
       {/* HERO */}
       <section className="hero" id="inicio">
-        <Image className="hero__bg hero__bg--desktop" src="/images/hero.png" alt="Dra. Alejandra Stivaletta" fill sizes="100vw" quality={90} priority />
+        <Image className="hero__bg hero__bg--desktop" src="/images/hero-desktop.jpg" alt="Dra. Alejandra Stivaletta" fill sizes="100vw" quality={90} priority />
         <Image className="hero__bg hero__bg--mobile" src="/images/hero-mobile.jpg" alt="Dra. Alejandra Stivaletta" fill sizes="100vw" quality={90} priority />
         <div className="hero__shade" />
         <div className="ticker" aria-hidden="true">
@@ -170,7 +170,7 @@ export default function Home() {
         <div className="problem__photo">
           <img src="/images/problema.jpg" alt="" />
         </div>
-        <div className="problem__text">
+        <div className="problem__text reveal">
           <h2>
             El problema muchas veces no es un síntoma.
             <br />
@@ -190,7 +190,7 @@ export default function Home() {
       <section className="method" id="metodo">
         <img className="method__bg" src="/images/metodo.png" alt="" />
         <div className="method__shade" />
-        <div className="method__inner">
+        <div className="method__inner reveal">
           <div className="method__head">
             <h2>El método</h2>
             <p>UN PROCESO MÉDICO, NO UNA CONSULTA AISLADA.</p>
@@ -213,7 +213,7 @@ export default function Home() {
 
       {/* 04 — PROPUESTA */}
       <section className="propuesta">
-        <div className="propuesta__inner">
+        <div className="propuesta__inner reveal">
           <div className="propuesta__left">
             <p className="propuesta__eyebrow">
               <span className="propuesta__eyebrow-line" />
@@ -235,7 +235,7 @@ export default function Home() {
 
       {/* 05 — PARA QUIÉN */}
       <section className="paraquien" id="para-quien">
-        <div className="paraquien__inner">
+        <div className="paraquien__inner reveal">
           <h2>Este abordaje puede ser para vos si sentís que algo en tu salud necesita ser comprendido de una forma más integral.</h2>
           <div className="paraquien__grid">
             {PARA_QUIEN.map(([n, t, d]) => (
@@ -249,14 +249,14 @@ export default function Home() {
           <p className="paraquien__cierre">No se trata solamente de mirar un síntoma aislado, sino de comprender cómo se relacionan entre sí tu historia clínica, tus hábitos, tu contexto y tu biología.</p>
           <div className="paraquien__btns">
             <a className="pill" href="#como-trabajamos">Quiero saber cómo trabajamos</a>
-            <a className="pill pill--soft" href="https://wa.me/PENDIENTE" target="_blank" rel="noopener noreferrer">Hablar con secretaría</a>
+            <a className="pill pill--soft" href="https://wa.me/34699593277" target="_blank" rel="noopener noreferrer">Hablar con secretaría</a>
           </div>
         </div>
       </section>
 
       {/* 05b — CÓMO TRABAJAMOS */}
       <section className="comotrabajamos" id="como-trabajamos">
-        <div className="comotrabajamos__inner">
+        <div className="comotrabajamos__inner reveal">
           <div className="comotrabajamos__head">
             <p className="comotrabajamos__eyebrow">
               <span className="comotrabajamos__eyebrow-line" />
@@ -276,13 +276,13 @@ export default function Home() {
             ))}
           </div>
           <p className="comotrabajamos__nota">Los precios de tests, estudios complementarios y otros recursos no figuran en la web: secretaría los presupuestará una vez valorado cada caso.</p>
-          <a className="pill pill--soft comotrabajamos__wa" href="https://wa.me/PENDIENTE" target="_blank" rel="noopener noreferrer">Tengo dudas, quiero hablar con secretaría</a>
+          <a className="pill pill--soft comotrabajamos__wa" href="https://wa.me/34699593277" target="_blank" rel="noopener noreferrer">Tengo dudas, quiero hablar con secretaría</a>
         </div>
       </section>
 
       {/* 06 — DIFERENCIAL */}
       <section className="diferencial">
-        <div className="diferencial__inner">
+        <div className="diferencial__inner reveal">
           <p className="diferencial__eyebrow">
             <span className="diferencial__line" />
             Por qué es diferente
@@ -302,7 +302,7 @@ export default function Home() {
       <section className="programa">
         <img className="programa__bg" src="/images/metodo.png" alt="" />
         <div className="programa__shade" />
-        <div className="programa__inner">
+        <div className="programa__inner reveal">
           <div className="programa__head">
             <p className="programa__eyebrow">
               <span className="programa__eyebrow-line" />
@@ -312,7 +312,7 @@ export default function Home() {
             <p className="programa__sub">Programa médico personalizado de 6 meses</p>
             <div className="programa__tags">
               <span className="programa__tag">📅 Duración: 6 meses</span>
-              <span className="programa__tag">🖥 Modalidad: Presencial + Online</span>
+              <span className="programa__tag">🖥 Modalidad: Presencial + En línea</span>
             </div>
           </div>
           <div className="programa__flow">
@@ -333,7 +333,7 @@ export default function Home() {
         <div className="sobre__photo">
           <img src="/images/problema.jpg" alt="Dra. Alejandra Stivaletta" />
         </div>
-        <div className="sobre__text">
+        <div className="sobre__text reveal">
           <p className="sobre__eyebrow">
             <span className="sobre__eyebrow-line" />
             Sobre Alejandra
@@ -360,13 +360,13 @@ export default function Home() {
 
       {/* 09 — ÁREAS */}
       <section className="areas" id="areas">
-        <div className="areas__inner">
+        <div className="areas__inner reveal">
           <div className="areas__head">
             <p className="areas__eyebrow">
               <span className="areas__eyebrow-line" />
               Áreas de expertise
             </p>
-            <h2>Áreas de expertise</h2>
+            <h2>En qué puedo acompañarte.</h2>
           </div>
           <div className="areas__grid">
             {AREAS.map(([t, d], i) => (
@@ -382,7 +382,7 @@ export default function Home() {
 
       {/* 10 — TESTIMONIOS */}
       <section className="testimonios">
-        <div className="testimonios__inner">
+        <div className="testimonios__inner reveal">
           <p className="testimonios__eyebrow">
             <span className="testimonios__eyebrow-line" />
             Historias reales
@@ -403,7 +403,7 @@ export default function Home() {
 
       {/* 11 — JOURNAL */}
       <section className="journal" id="recursos">
-        <div className="journal__inner">
+        <div className="journal__inner reveal">
           <div className="journal__head">
             <p className="journal__eyebrow">
               <span className="journal__eyebrow-line" />
@@ -426,7 +426,7 @@ export default function Home() {
 
       {/* 12 — FAQ */}
       <section className="faq" id="faq">
-        <div className="faq__inner">
+        <div className="faq__inner reveal">
           <div className="faq__left">
             <p className="faq__eyebrow">
               <span className="faq__eyebrow-line" />
@@ -444,7 +444,7 @@ export default function Home() {
 
       {/* 13 — CONTACTO */}
       <section className="contacto" id="contacto">
-        <div className="contacto__inner">
+        <div className="contacto__inner reveal">
           <div className="contacto__head">
             <p className="contacto__eyebrow">
               <span className="contacto__eyebrow-line" />
@@ -467,8 +467,8 @@ export default function Home() {
               </div>
               <div className="contacto__row contacto__row--2">
                 <div className="contacto__field">
-                  <label>Email</label>
-                  <input type="email" name="email" required placeholder="tu@email.com" />
+                  <label>Correo electrónico</label>
+                  <input type="email" name="email" required placeholder="tucorreo@ejemplo.com" />
                 </div>
                 <div className="contacto__field">
                   <label>Teléfono</label>
@@ -485,7 +485,7 @@ export default function Home() {
                   <option value="">Seleccioná una opción</option>
                   <option value="preconsulta">Preconsulta</option>
                   <option value="consulta">Consulta individual</option>
-                  <option value="packs">Packs de consultas</option>
+                  <option value="packs">Paquetes de consultas</option>
                   <option value="seguimiento">Seguimiento extenso</option>
                   <option value="otra">Otra consulta</option>
                 </select>
@@ -508,7 +508,30 @@ export default function Home() {
               <div className="contacto__wa-box">
                 <p className="contacto__wa-label">¿Preferís escribir directamente?</p>
                 <p className="contacto__wa-desc">Si preferís consultar sobre disponibilidad, modalidades o próximos pasos, podés escribir a secretaría.</p>
-                <a className="pill contacto__wa-btn" href="https://wa.me/PENDIENTE" target="_blank" rel="noopener noreferrer">Hablar con secretaría</a>
+                <a className="pill contacto__wa-btn" href="https://wa.me/34699593277" target="_blank" rel="noopener noreferrer">Hablar con secretaría</a>
+              </div>
+              <div className="contacto__wa-box">
+                <p className="contacto__wa-label">Datos de contacto</p>
+                <ul className="contacto__datos">
+                  <li>
+                    <span>Correo electrónico</span>
+                    <a href="mailto:dra.alejandra.stivaletta@gmail.com">dra.alejandra.stivaletta@gmail.com</a>
+                  </li>
+                  <li>
+                    <span>Teléfono / WhatsApp</span>
+                    <a href="https://wa.me/34699593277" target="_blank" rel="noopener noreferrer">699 593 277</a>
+                  </li>
+                  <li>
+                    <span>Dirección</span>
+                    AV Picasso 66, Local 1 — CP 07141
+                  </li>
+                  <li>
+                    <span>Horario de atención</span>
+                    Lun – Vie: 10:00 – 17:00
+                    <br />
+                    Sáb – Dom: cerrado
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

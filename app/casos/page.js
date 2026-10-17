@@ -48,7 +48,7 @@ export default function CasosPage() {
       {/* TESTIMONIOS */}
       <section className="sp-sec">
         <img className="sp-sec__glow sp-sec__glow--right" src="/images/degradado-olive.png" alt="" aria-hidden="true" />
-        <div className="sp-sec__inner">
+        <div className="sp-sec__inner reveal">
           <p className="sp-eyebrow">
             <span className="sp-eyebrow__line" />
             Relatos
@@ -67,7 +67,7 @@ export default function CasosPage() {
 
       {/* NOTA MÉDICA */}
       <section className="sp-sec sp-sec--pink">
-        <div className="sp-sec__inner sp-split">
+        <div className="sp-sec__inner sp-split reveal">
           <div>
             <p className="sp-eyebrow">
               <span className="sp-eyebrow__line" />
@@ -99,7 +99,7 @@ export default function CasosPage() {
         <img className="sp-cta__bg" src="/images/alejandra-cta.jpg" alt="" aria-hidden="true" />
         <div className="sp-cta__shade" />
         <img className="sp-cta__glow" src="/images/degradado-cream.png" alt="" aria-hidden="true" />
-        <div className="sp-cta__inner">
+        <div className="sp-cta__inner reveal">
           <p className="sp-eyebrow sp-eyebrow--gold">
             <span className="sp-eyebrow__line" />
             Tu proceso

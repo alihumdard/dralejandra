@@ -65,9 +65,11 @@ export default function Footer() {
           <div className="footer__col" aria-label="Contacto">
             <h3 className="footer__col-title">Contacto</h3>
             <ul>
-              <li><a href="mailto:hola@dominio.com">hola@dominio.com</a></li>
-              <li><a href="tel:+00000000000">+00 000 000 000</a></li>
-              <li>Ciudad, País</li>
+              <li><a href="mailto:dra.alejandra.stivaletta@gmail.com">dra.alejandra.stivaletta@gmail.com</a></li>
+              <li><a href="https://wa.me/34699593277" target="_blank" rel="noopener noreferrer">699 593 277 (WhatsApp)</a></li>
+              <li>AV Picasso 66, Local 1 — CP 07141</li>
+              <li>Lun – Vie: 10:00 – 17:00</li>
+              <li>Sáb – Dom: cerrado</li>
             </ul>
           </div>
         </div>

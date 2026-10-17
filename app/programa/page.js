@@ -70,7 +70,7 @@ export default function ProgramaPage() {
       {/* CONCEPTO */}
       <section className="sp-sec">
         <img className="sp-sec__glow sp-sec__glow--right" src="/images/degradado-olive.png" alt="" aria-hidden="true" />
-        <div className="sp-sec__inner sp-split">
+        <div className="sp-sec__inner sp-split reveal">
           <div>
             <p className="sp-eyebrow">
               <span className="sp-eyebrow__line" />
@@ -84,7 +84,7 @@ export default function ProgramaPage() {
               longitudinal y ajustes reales según tu evolución.
             </p>
             <ul className="sp-list sp-list--check">
-              <li>Modalidad presencial y online (Zoom) según el caso.</li>
+              <li>Modalidad presencial y en línea (videollamada) según el caso.</li>
               <li>La valoración inicial no implica automáticamente entrar al programa.</li>
               <li>Cada etapa se define con vos, con objetivos y plazos claros.</li>
             </ul>
@@ -102,7 +102,7 @@ export default function ProgramaPage() {
 
       {/* LAS 7 ETAPAS */}
       <section className="sp-sec sp-sec--pink">
-        <div className="sp-sec__inner">
+        <div className="sp-sec__inner reveal">
           <p className="sp-eyebrow">
             <span className="sp-eyebrow__line" />
             Las etapas
@@ -125,7 +125,7 @@ export default function ProgramaPage() {
       {/* FRASE */}
       <section className="sp-sec sp-sec--dark">
         <img className="sp-sec__glow sp-sec__glow--left" src="/images/degradado-cream.png" alt="" aria-hidden="true" />
-        <div className="sp-sec__inner sp-manifesto">
+        <div className="sp-sec__inner sp-manifesto reveal">
           <p className="sp-eyebrow sp-eyebrow--gold" style={{ justifyContent: "center" }}>
             <span className="sp-eyebrow__line" />
             Nuestra filosofía
@@ -142,7 +142,7 @@ export default function ProgramaPage() {
         <img className="sp-cta__bg" src="/images/alejandra-cta.jpg" alt="" aria-hidden="true" />
         <div className="sp-cta__shade" />
         <img className="sp-cta__glow" src="/images/degradado-cream.png" alt="" aria-hidden="true" />
-        <div className="sp-cta__inner">
+        <div className="sp-cta__inner reveal">
           <p className="sp-eyebrow sp-eyebrow--gold">
             <span className="sp-eyebrow__line" />
             Primer paso

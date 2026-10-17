@@ -21,7 +21,7 @@ const TIPOS = [
   ["01.", "Artículos", "Lecturas clínicas y contemporáneas sobre los temas que más consultan las pacientes."],
   ["02.", "Videos", "Explicaciones breves de conceptos clave, en el mismo lenguaje de la consulta."],
   ["03.", "Guías", "Material de referencia para ordenar información antes o después de una valoración."],
-  ["04.", "Boletín", "Actualizaciones por email: nuevos contenidos, sin ruido y sin promesas."],
+  ["04.", "Boletín", "Actualizaciones por correo: nuevos contenidos, sin ruido y sin promesas."],
   ["05.", "Clases magistrales", "Sesiones profundas en vivo sobre ejes completos: digestión, hormonas, longevidad."],
 ];
 
@@ -48,7 +48,7 @@ export default function RecursosPage() {
       {/* CATEGORÍAS */}
       <section className="sp-sec sp-sec--dark">
         <img className="sp-sec__glow sp-sec__glow--left" src="/images/degradado-cream.png" alt="" aria-hidden="true" />
-        <div className="sp-sec__inner">
+        <div className="sp-sec__inner reveal">
           <p className="sp-eyebrow sp-eyebrow--gold">
             <span className="sp-eyebrow__line" />
             Categorías
@@ -65,7 +65,7 @@ export default function RecursosPage() {
       {/* FORMATOS */}
       <section className="sp-sec">
         <img className="sp-sec__glow sp-sec__glow--right" src="/images/degradado-olive.png" alt="" aria-hidden="true" />
-        <div className="sp-sec__inner">
+        <div className="sp-sec__inner reveal">
           <p className="sp-eyebrow">
             <span className="sp-eyebrow__line" />
             Formatos
@@ -85,7 +85,7 @@ export default function RecursosPage() {
 
       {/* PRÓXIMAMENTE */}
       <section className="sp-sec sp-sec--pink">
-        <div className="sp-sec__inner sp-split">
+        <div className="sp-sec__inner sp-split reveal">
           <div>
             <p className="sp-eyebrow">
               <span className="sp-eyebrow__line" />
@@ -118,7 +118,7 @@ export default function RecursosPage() {
         <img className="sp-cta__bg" src="/images/alejandra-cta.jpg" alt="" aria-hidden="true" />
         <div className="sp-cta__shade" />
         <img className="sp-cta__glow" src="/images/degradado-cream.png" alt="" aria-hidden="true" />
-        <div className="sp-cta__inner">
+        <div className="sp-cta__inner reveal">
           <p className="sp-eyebrow sp-eyebrow--gold">
             <span className="sp-eyebrow__line" />
             ¿Tu caso?
@@ -130,7 +130,7 @@ export default function RecursosPage() {
           </p>
           <div className="sp-cta__btns">
             <a className="pill sp-cta__primary" href="/solicitar-valoracion">Solicitar una valoración</a>
-            <a className="pill" href="/faq">Ver FAQ</a>
+            <a className="pill" href="/faq">Ver preguntas frecuentes</a>
           </div>
         </div>
       </section>

@@ -35,7 +35,7 @@ export default function EquipoPage() {
 
       {/* CÓMO FUNCIONA */}
       <section className="sp-sec sp-sec--pink">
-        <div className="sp-sec__inner sp-split">
+        <div className="sp-sec__inner sp-split reveal">
           <div>
             <p className="sp-eyebrow">
               <span className="sp-eyebrow__line" />
@@ -68,7 +68,7 @@ export default function EquipoPage() {
       {/* COLABORADORES */}
       <section className="sp-sec sp-sec--dark">
         <img className="sp-sec__glow sp-sec__glow--right" src="/images/degradado-cream.png" alt="" aria-hidden="true" />
-        <div className="sp-sec__inner">
+        <div className="sp-sec__inner reveal">
           <p className="sp-eyebrow sp-eyebrow--gold">
             <span className="sp-eyebrow__line" />
             Disciplinas
@@ -91,7 +91,7 @@ export default function EquipoPage() {
         <img className="sp-cta__bg" src="/images/alejandra-cta.jpg" alt="" aria-hidden="true" />
         <div className="sp-cta__shade" />
         <img className="sp-cta__glow" src="/images/degradado-cream.png" alt="" aria-hidden="true" />
-        <div className="sp-cta__inner">
+        <div className="sp-cta__inner reveal">
           <p className="sp-eyebrow sp-eyebrow--gold">
             <span className="sp-eyebrow__line" />
             Primer paso

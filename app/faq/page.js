@@ -13,8 +13,8 @@ const PREGUNTAS = [
     "No es obligatorio. Si ya tenés estudios recientes, traelos: se revisan en contexto. Si no, la valoración inicial define qué estudios tienen sentido pedir — y cuáles no hace falta.",
   ],
   [
-    "¿Atendés online?",
-    "Sí. El programa puede funcionar de forma presencial u online (Zoom), según el caso y lo que este requiera. Lo definimos juntas en la valoración inicial.",
+    "¿Atendés en línea?",
+    "Sí. El programa puede funcionar de forma presencial o en línea (videollamada), según el caso y lo que este requiera. Lo definimos juntas en la valoración inicial.",
   ],
   [
     "¿Por qué el programa dura seis meses?",
@@ -30,7 +30,7 @@ const PREGUNTAS = [
   ],
   [
     "¿Qué ocurre después de solicitar una valoración?",
-    "Nuestro equipo revisa tu solicitud y te contacta para coordinar la valoración inicial: horario, modalidad (presencial u online) y qué material traer. Recién ahí, y solo si lo decidís, se avanza hacia el programa.",
+    "Nuestro equipo revisa tu solicitud y te contacta para coordinar la valoración inicial: horario, modalidad (presencial o en línea) y qué material traer. Recién ahí, y solo si lo decidís, se avanza hacia el programa.",
   ],
 ];
 
@@ -57,7 +57,7 @@ export default function FaqPage() {
 
       {/* FAQ */}
       <section className="sp-sec">
-        <div className="sp-sec__inner">
+        <div className="sp-sec__inner reveal">
           <div className="sp-faq">
             {PREGUNTAS.map(([q, a], i) => (
               <div className={`sp-faq__item${open === i ? " sp-faq__item--open" : ""}`} key={q}>
@@ -83,7 +83,7 @@ export default function FaqPage() {
         <img className="sp-cta__bg" src="/images/alejandra-cta.jpg" alt="" aria-hidden="true" />
         <div className="sp-cta__shade" />
         <img className="sp-cta__glow" src="/images/degradado-cream.png" alt="" aria-hidden="true" />
-        <div className="sp-cta__inner">
+        <div className="sp-cta__inner reveal">
           <p className="sp-eyebrow sp-eyebrow--gold">
             <span className="sp-eyebrow__line" />
             ¿Otra pregunta?

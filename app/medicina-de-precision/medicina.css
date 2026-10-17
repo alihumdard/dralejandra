@@ -16,7 +16,7 @@
   align-items: center;
   gap: 12px;
   font-family: var(--font-sans), sans-serif;
-  font-size: 0.75rem;
+  font-size: var(--text-label);
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--gold);
@@ -106,7 +106,7 @@
 
 .mp-hero__photo img {
   object-fit: cover;
-  object-position: 52% 18%;
+  object-position: 58% 6%;
 }
 
 .mp-hero .pill {
@@ -187,7 +187,7 @@
 
 .mp-points__label {
   font-family: var(--font-sans), sans-serif;
-  font-size: 0.6875rem;
+  font-size: var(--text-label);
   text-transform: uppercase;
   letter-spacing: 0.13em;
   color: var(--mp-wine);
@@ -276,7 +276,7 @@
   gap: clamp(14px, 1.8vw, 26px);
   padding: clamp(16px, 1.9vw, 24px) clamp(6px, 0.8vw, 12px);
   border-top: 1px solid rgba(255, 241, 207, 0.12);
-  transition: border-top-color 0.3s, background 0.3s;
+  transition: border-top-color 0.25s, background 0.25s;
 }
 
 .mp-analiza__item:hover {
@@ -337,7 +337,7 @@
   padding: clamp(28px, 3.5vw, 52px) clamp(20px, 2.5vw, 36px);
   display: flex;
   flex-direction: column;
-  transition: border-top-color 0.3s, background 0.3s;
+  transition: border-top-color 0.25s, background 0.25s;
 }
 
 .mp-areas__card:hover {
@@ -387,7 +387,7 @@ a.mp-areas__card {
   margin-top: auto;
   padding-top: clamp(18px, 2vw, 26px);
   font-family: var(--font-sans), sans-serif;
-  font-size: 0.6875rem;
+  font-size: var(--text-label);
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--gold);
@@ -562,7 +562,7 @@ a.mp-areas__card {
   color: inherit;
   display: flex;
   flex-direction: column;
-  transition: border-top-color 0.3s, background 0.3s;
+  transition: border-top-color 0.25s, background 0.25s;
 }
 
 .mp-next__card:hover {
@@ -740,11 +740,11 @@ a.mp-areas__card {
 
 @media (max-width: 767px) {
   .mp-hero__photo {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 4 / 5;
   }
 
   .mp-hero__photo img {
-    object-position: 55% 20%;
+    object-position: center top;
   }
 
   .mp-hero__glow {
@@ -800,5 +800,22 @@ a.mp-areas__card {
 
   .mp-msg__list {
     grid-template-columns: 1fr;
+  }
+
+  /* ── Mobile: uniform section rhythm ── */
+  .mp-manifesto,
+  .mp-analiza,
+  .mp-areas,
+  .mp-next,
+  .mp-conn,
+  .mp-msg,
+  .mp-topics,
+  .mp-cta__inner {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .mp-hero__text {
+    padding: 96px var(--pad) 48px;
   }
 }
