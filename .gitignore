@@ -1,3 +1,6 @@
 node_modules
 .next
 brand-assets
+
+# Logo source files (logo-mark.png / logo-icon.png are generated from these)
+public/images/Elegant*.png

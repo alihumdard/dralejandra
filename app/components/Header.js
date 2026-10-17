@@ -67,7 +67,7 @@ export default function Header() {
       <div className="header__mobile-backdrop" onClick={closeMobile} aria-hidden="true" />
       <aside className="header__mobile-drawer" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menú de navegación">
         <div className="header__drawer-header">
-          <span className="header__drawer-logo">Dra. Alejandra Stivaletta</span>
+          <img className="header__drawer-logo" src="/images/logo-mark.png" alt="Dra. Alejandra Stivaletta" />
           <button className="header__drawer-close" onClick={closeMobile} aria-label="Cerrar menú">
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="#848152" strokeWidth="1.5" strokeLinecap="round" aria-hidden="true">
               <path d="M3 3 L19 19 M19 3 L3 19" />
@@ -128,8 +128,8 @@ export default function Header() {
   return (
     <>
       <header className={`header ${scrolled ? "header--scrolled" : ""}`} role="banner">
-        <a href="/" className="header__logo">
-          Dra. Alejandra Stivaletta
+        <a href="/" className="header__logo" aria-label="Dra. Alejandra Stivaletta — inicio">
+          <img src="/images/logo-mark.png" alt="Dra. Alejandra Stivaletta" />
         </a>
 
         <nav className="header__nav" aria-label="Navegación principal">
