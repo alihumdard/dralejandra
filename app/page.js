@@ -138,9 +138,6 @@ export default function Home() {
     <main>
       {/* HERO */}
       <section className="hero" id="inicio">
-        <Image className="hero__bg hero__bg--desktop" src="/images/hero-desktop.jpg" alt="Dra. Alejandra Stivaletta" fill sizes="100vw" quality={90} priority />
-        <Image className="hero__bg hero__bg--mobile" src="/images/hero-mobile.jpg" alt="Dra. Alejandra Stivaletta" fill sizes="100vw" quality={90} priority />
-        <div className="hero__shade" />
         <div className="ticker" aria-hidden="true">
           <div className="ticker__track">
             {[0, 1, 2, 3].map((i) => (
@@ -148,6 +145,10 @@ export default function Home() {
             ))}
           </div>
         </div>
+        <div className="hero__body">
+        <Image className="hero__bg hero__bg--desktop" src="/images/hero-desktop.jpg" alt="Dra. Alejandra Stivaletta" fill sizes="100vw" quality={90} priority />
+        <Image className="hero__bg hero__bg--mobile" src="/images/hero-mobile.jpg" alt="Dra. Alejandra Stivaletta" fill sizes="100vw" quality={90} priority />
+        <div className="hero__shade" />
         <div className="hero__inner">
           <div className="hero__text">
             <span className="hero__line" />
@@ -162,6 +163,7 @@ export default function Home() {
             <a className="pill" href="#contacto">Solicitar una valoración</a>
             <a className="pill pill--soft" href="#metodo">Conocer el método</a>
           </div>
+        </div>
         </div>
       </section>
 

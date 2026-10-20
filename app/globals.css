@@ -161,9 +161,18 @@
                                     /* HERO */
                                     
                                     .hero {
+                                        position: relative;
                                         min-height: 100svh;
                                         min-height: max(100svh, 560px);
                                         background: #f8e4e1;
+                                        display: flex;
+                                        flex-direction: column;
+                                    }
+
+                                    .hero__body {
+                                        position: relative;
+                                        flex: 1;
+                                        min-height: 0;
                                     }
 
                                     .hero__bg {
@@ -465,9 +474,18 @@
                                             background: linear-gradient(180deg, rgba(20, 15, 5, 0.45) 0%, rgba(20, 15, 5, 0.1) 28%, rgba(20, 15, 5, 0) 45%, rgba(20, 15, 5, 0.6) 100%);
                                         }
                                         .ticker {
+                                            position: absolute;
+                                            top: 56px;
                                             background: rgba(43, 42, 24, 0.9);
                                             height: 30px;
                                             font-size: 12px;
+                                        }
+                                        .hero__body {
+                                            position: absolute;
+                                            inset: 0;
+                                        }
+                                        .header__hamburger-line {
+                                            background: #fff;
                                         }
                                         .hero__inner {
                                             padding-bottom: 28px;
@@ -702,7 +720,7 @@
                                         object-fit: contain;
                                     }
                                     .header__drawer-logo-img {
-                                        height: 34px;
+                                        height: 22px;
                                         width: auto;
                                         display: block;
                                         object-fit: contain;
@@ -860,7 +878,7 @@
                                         display: block;
                                         width: 24px;
                                         height: 2px;
-                                        background: var(--rose);
+                                        background: #fff;
                                         border-radius: 2px;
                                     }
                                     
@@ -1026,7 +1044,7 @@
                                     }
                                     
                                     .header--scrolled .header__hamburger-line {
-                                        background: var(--rose);
+                                        background: #fff;
                                     }
                                     /* FOOTER */
                                     
