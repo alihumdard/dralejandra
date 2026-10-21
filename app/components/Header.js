@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 const AREAS_ITEMS = [
   { href: "/medicina-de-precision", label: "Medicina de Precisión" },
   { href: "/salud-digestiva-y-microbiota", label: "Salud digestiva y microbiota" },
-  { href: "/medicina-predictiva", label: "Medicina predictiva" },
+  { href: "/salud-integral", label: "Salud integral" },
   { href: "/longevidad", label: "Longevidad" },
 ];
 

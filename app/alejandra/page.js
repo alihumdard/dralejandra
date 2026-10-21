@@ -69,7 +69,7 @@ export default function AlejandraPage() {
               Hoy mi práctica une la mirada clínica tradicional con medicina
               integrativa, funcional y de precisión: escuchar tu historia,
               leer tus datos en contexto y construir un plan que se sostenga en
-              el tiempo.
+              el tiempo, estos espacios permiten sostener el proceso en el tiempo con coherencia clínica y personal.
             </p>
           </div>
         </div>

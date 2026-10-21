@@ -13,9 +13,9 @@ export const AREAS = [
   },
   {
     n: "03.",
-    t: "Medicina predictiva",
+    t: "Salud integral",
     d: "No esperar a que algo pase para empezar a mirar.",
-    href: "/medicina-predictiva",
+    href: "/salud-integral",
   },
   {
     n: "04.",

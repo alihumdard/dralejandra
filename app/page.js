@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState, useRef } from "react";
 
-const TICKER = "MEDICINA FAMILIAR Y DE PRECISIÓN · MICROBIOTA · MEDICINA PREDICTIVA · LONGEVIDAD · ";
+const TICKER = "MEDICINA FAMILIAR Y DE PRECISIÓN · MICROBIOTA · SALUD INTEGRAL · LONGEVIDAD · ";
 
 const SINTOMAS = [
   "inflamación",
@@ -104,9 +104,10 @@ const TESTIMONIOS = [
 ];
 
 const JOURNAL = [
-  ["SALUD INTESTINAL", "La importancia de una microbiota saludable.", "Cómo influye en tu energía, inmunidad y bienestar general."],
-  ["SALUD HORMONAL", "Perimenopausia: qué cambia y cómo acompañarlo.", "Síntomas, herramientas y un enfoque integral."],
-  ["LONGEVIDAD", "Metabolismo lento: señales y estrategias.", "Cómo identificarlo y qué podés hacer."],
+  ["ESTILO DE VIDA", "Más allá de la calma: cómo la meditación recalibra tu sistema nervioso central.", "Descubre el impacto neurobiológico de la meditación sobre el sistema nervioso, la regulación del estrés y su papel en la salud hormonal, digestiva y emocional.", "/recursos/meditacion-sistema-nervioso"],
+  ["SALUD INTESTINAL", "La importancia de una microbiota saludable.", "Cómo influye en tu energía, tu sistema inmunitario y tu bienestar general.", "/recursos/microbiota-saludable"],
+  ["SALUD HORMONAL", "Perimenopausia: qué cambia en tu cuerpo y cómo acompañarlo.", "Una etapa de transformación hormonal que merece comprensión, atención y un acompañamiento personalizado.", "/recursos/perimenopausia"],
+  ["LONGEVIDAD", "Metabolismo lento: señales, causas y estrategias para cuidar tu salud.", "Cómo identificar los cambios de tu metabolismo, comprender sus posibles causas y acompañar a tu cuerpo de manera saludable.", "/recursos/metabolismo-lento"],
 ];
 
 const FAQS = [
@@ -344,6 +345,7 @@ export default function Home() {
           <h2>Medicina con ciencia.<br />Atención con tiempo.</h2>
           <p className="sobre__bio">Soy Alejandra Stivaletta, médica. Desde muy chica sentí la vocación de cuidar, y con los años esa vocación se transformó en una manera muy personal de ejercer la medicina.</p>
           <p className="sobre__bio">A lo largo de mi recorrido fui entendiendo que la salud no puede abordarse únicamente desde un diagnóstico o un síntoma aislado. Aprendí a mirar al paciente más allá de su enfermedad, comprendiendo que su historia, su entorno, sus hábitos y su forma de vivir también forman parte de su salud.</p>
+          <p className="sobre__bio">Entender la salud requiere tiempo, conciencia y la capacidad de encarnar los procesos de cambio. No buscamos soluciones rápidas, sino construir una coherencia biológica y hábitos sostenibles que respeten la historia de cada persona.</p>
           <p className="sobre__bio sobre__bio--cite">&ldquo;No mirar únicamente qué le ocurre a una persona, sino intentar comprender quién es, cómo vive y qué puede estar influyendo en su salud. La salud es conexión.&rdquo;</p>
           <div className="sobre__formacion">
             <p className="sobre__formacion-label">Formación</p>
@@ -415,12 +417,12 @@ export default function Home() {
             <h2>Conocimiento para tu salud</h2>
           </div>
           <div className="journal__grid">
-            {JOURNAL.map(([cat, title, excerpt]) => (
+            {JOURNAL.map(([cat, title, excerpt, href]) => (
               <div key={title} className="journal__card">
                 <span className="journal__cat">{cat}</span>
                 <h3>{title}</h3>
                 <p>{excerpt}</p>
-                <a href="#" className="journal__link">Leer artículo →</a>
+                <a href={href} className="journal__link">Leer artículo →</a>
               </div>
             ))}
           </div>

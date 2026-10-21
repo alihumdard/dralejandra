@@ -3,7 +3,7 @@ import { AREAS } from "../areas";
 import "../medicina-de-precision/medicina.css";
 
 export const metadata = {
-  title: "Medicina predictiva | Dra. Alejandra Stivaletta",
+  title: "Salud integral | Dra. Alejandra Stivaletta",
   description:
     "No esperar a que algo pase para empezar a mirar. Señales tempranas, biomarcadores en tendencia y seguimiento para decidir con anticipación.",
 };
@@ -28,7 +28,7 @@ const PUNTOS = [
   "Dar seguimiento y ajustar el plan en el tiempo.",
 ];
 
-const HREF = "/medicina-predictiva";
+const HREF = "/salud-integral";
 
 export default function MedicinaPredictivaPage() {
   return (
@@ -39,7 +39,7 @@ export default function MedicinaPredictivaPage() {
         <div className="mp-hero__text">
           <p className="mp-eyebrow mp-eyebrow--wine">
             <span className="mp-eyebrow__line" />
-            Medicina predictiva
+            Salud integral
           </p>
           <h1>No esperar a que algo pase para empezar a mirar.</h1>
           <p className="mp-hero__concept">Señales tempranas + seguimiento en el tiempo.</p>

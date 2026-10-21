@@ -48,7 +48,7 @@ export default function Footer() {
             <ul>
               <li><a href="/medicina-de-precision">Medicina de precisión</a></li>
               <li><a href="/salud-digestiva-y-microbiota">Salud digestiva y microbiota</a></li>
-              <li><a href="/medicina-predictiva">Medicina predictiva</a></li>
+              <li><a href="/salud-integral">Salud integral</a></li>
               <li><a href="/longevidad">Longevidad</a></li>
               <li><a href="/valoracion-inicial">Valoración inicial</a></li>
             </ul>
