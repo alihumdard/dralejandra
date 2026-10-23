@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import "../st-pages.css";
 
 export const metadata = {
@@ -35,7 +35,7 @@ export default function AlejandraPage() {
         <div className="sp-sec__inner sp-portrait reveal">
           <div className="sp-portrait__img">
             <Image
-              src="/images/alejandra-sobre.jpg"
+              src="/images/alejandra-digestiva.jpg"
               alt="Dra. Alejandra Stivaletta"
               fill
               sizes="(max-width: 767px) 100vw, 40vw"
@@ -113,7 +113,7 @@ export default function AlejandraPage() {
 
       {/* CTA */}
       <section className="sp-cta">
-        <img className="sp-cta__bg" src="/images/alejandra-cta.jpg" alt="" aria-hidden="true" />
+        <img className="sp-cta__bg" src="/images/client-3.png" alt="" aria-hidden="true" />
         <div className="sp-cta__shade" />
         <img className="sp-cta__glow" src="/images/degradado-cream.png" alt="" aria-hidden="true" />
         <div className="sp-cta__inner reveal">

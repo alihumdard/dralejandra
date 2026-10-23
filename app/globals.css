@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   /* Palette global — nayi brand palette */
   --cream: #fff1cf;
   --cream-alt: #f8e4e1;
@@ -1858,11 +1858,13 @@
                                         border-bottom: 1px solid rgba(132, 129, 82, 0.2);
                                         display: grid;
                                         grid-template-columns: 55% 45%;
-                                        min-height: max(70vh, 500px);
+                                        align-items: stretch;
                                     }
                                     
                                     .sobre__photo {
                                         position: relative;
+                                        height: 100%;
+                                        min-height: 100%;
                                         overflow: hidden;
                                     }
                                     
@@ -1872,7 +1874,7 @@
                                         width: 100%;
                                         height: 100%;
                                         object-fit: cover;
-                                        object-position: center top;
+                                        object-position: center 20%;
                                     }
                                     
                                     .sobre__text {
@@ -1937,6 +1939,8 @@
                                         .sobre__photo {
                                             aspect-ratio: 1 / 1;
                                             position: relative;
+                                            height: auto;
+                                            min-height: 0;
                                         }
                                         .sobre__photo img {
                                             object-position: center;

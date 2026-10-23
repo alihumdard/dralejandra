@@ -870,19 +870,20 @@
 
 .sp-portrait__img {
     position: relative;
-    flex: 1.1 1 0;
-    aspect-ratio: 1800 / 2133;
-    max-height: 640px;
+    flex: 0 0 auto;
+    height: clamp(420px, 64vh, 640px);
+    aspect-ratio: 1800 / 2295;
     overflow: hidden;
 }
 
 .sp-portrait__img img {
-    object-fit: cover;
-    object-position: center top;
+    object-fit: contain;
+    object-position: center;
 }
 
 .sp-portrait__body {
-    flex: 0.65 1 0;
+    flex: 1 1 0;
+    min-width: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -908,6 +909,21 @@
 
 /* Responsive */
 
+@media (max-width: 900px) {
+    .sp-portrait {
+        flex-direction: column;
+    }
+    .sp-portrait__img {
+        width: min(100%, 440px);
+        height: auto;
+        align-self: center;
+    }
+    .sp-portrait__body {
+        padding-left: 0;
+        padding-top: clamp(24px, 4vw, 40px);
+    }
+}
+
 @media (max-width: 1100px) {
     .sp-cards {
         grid-template-columns: repeat(2, 1fr);
@@ -929,6 +945,9 @@
         flex: none;
         width: 100%;
     }
+    .sp-portrait__img {
+        height: auto;
+    }
     .sp-cards,
     .sp-cards--2,
     .sp-cards--4,
@@ -949,8 +968,9 @@
     }
     /* Shorter on phones, whole portrait visible */
     .sp-portrait__img {
-        aspect-ratio: 1800 / 2133;
-        max-height: 58vh;
+        aspect-ratio: 1800 / 2295;
+        width: min(100%, calc(62vh * 0.7843));
+        max-height: none;
     }
     .sp-portrait__img img {
         object-fit: contain;

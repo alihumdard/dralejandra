@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import { AREAS } from "../areas";
 import "./medicina.css";
 
@@ -48,7 +48,7 @@ export default function MedicinaDePrecisionPage() {
         </div>
         <div className="mp-hero__photo">
           <Image
-            src="/images/alejandra-precision.jpg"
+            src="/images/client-2.png"
             alt="Dra. Alejandra Stivaletta en su consulta"
             fill
             sizes="(max-width: 1100px) 100vw, 45vw"
@@ -184,7 +184,7 @@ export default function MedicinaDePrecisionPage() {
 
       {/* 06 — CTA FINAL */}
       <section className="mp-cta" id="contacto">
-        <img className="mp-cta__bg" src="/images/alejandra-cta.jpg" alt="" aria-hidden="true" />
+        <img className="mp-cta__bg" src="/images/client-3.png" alt="" aria-hidden="true" />
         <div className="mp-cta__shade" />
         <img className="mp-cta__glow" src="/images/degradado-cream.png" alt="" aria-hidden="true" />
         <div className="mp-cta__inner reveal">

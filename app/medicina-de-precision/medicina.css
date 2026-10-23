@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
    MEDICINA DE PRECISIÓN — page scoped (mp-*)
    Same tokens & patterns as app/globals.css
    ============================================================ */
@@ -106,7 +106,7 @@
 
 .mp-hero__photo img {
   object-fit: cover;
-  object-position: 58% 6%;
+  object-position: center 65%;
 }
 
 .mp-hero .pill {
