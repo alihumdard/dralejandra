@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import { AREAS } from "../areas";
 import "../medicina-de-precision/medicina.css";
 
@@ -38,7 +38,7 @@ export default function LongevidadPage() {
         img className = "mp-hero__glow"
         src = "/images/degradado-cream.png"
         alt = ""
-        aria - hidden = "true" / >
+        aria-hidden = "true" / >
         <
         div className = "mp-hero__text" >
         <
@@ -75,7 +75,7 @@ export default function LongevidadPage() {
         img className = "mp-manifesto__glow"
         src = "/images/degradado-olive.png"
         alt = ""
-        aria - hidden = "true" / >
+        aria-hidden = "true" / >
         <
         div className = "mp-manifesto__inner reveal" >
         <
@@ -154,7 +154,7 @@ export default function LongevidadPage() {
         img className = "mp-analiza__glow"
         src = "/images/degradado-cream.png"
         alt = ""
-        aria - hidden = "true" / >
+        aria-hidden = "true" / >
         <
         div className = "mp-analiza__inner reveal" >
         <
@@ -234,14 +234,14 @@ export default function LongevidadPage() {
         img className = "mp-cta__bg"
         src = "/images/client-3.png"
         alt = ""
-        aria - hidden = "true" / >
+        aria-hidden = "true" / >
         <
         div className = "mp-cta__shade" / >
         <
         img className = "mp-cta__glow"
         src = "/images/degradado-cream.png"
         alt = ""
-        aria - hidden = "true" / >
+        aria-hidden = "true" / >
         <
         div className = "mp-cta__inner reveal" >
         <
