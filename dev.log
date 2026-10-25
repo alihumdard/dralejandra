@@ -1,0 +1,207 @@
+
+> stivaletta-site@1.0.0 dev
+> next dev
+
+ ⚠ Port 3000 is in use, trying 3001 instead.
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3001
+
+ ✓ Starting...
+ ✓ Ready in 5.1s
+ ○ Compiling /alejandra ...
+ ✓ Compiled /alejandra in 3.9s (537 modules)
+ GET /alejandra 200 in 4908ms
+ GET /alejandra 200 in 5029ms
+ ○ Compiling /icon.png ...
+ ✓ Compiled /icon.png in 1136ms (319 modules)
+ GET /icon.png?48c0b746dd32f1ed 200 in 1425ms
+ GET /icon.png?48c0b746dd32f1ed 200 in 1487ms
+ ○ Compiling / ...
+ ✓ Compiled / in 972ms (579 modules)
+ GET / 200 in 1491ms
+ GET /icon.png?48c0b746dd32f1ed 200 in 94ms
+ ⨯ ./app/alejandra/page.js
+Error: 
+  [31mx[0m Expression expected
+     ,-[[36;1;4mC:\All Folder\Oracles force\dralejandra\app\alejandra\page.js[0m:100:1]
+ [2m100[0m |         img className = "sp-sec__glow sp-sec__glow--left"
+ [2m101[0m |         src = "/images/degradado-cream.png"
+ [2m102[0m |         alt = ""
+ [2m103[0m |         aria - hidden = "true" / >
+     : [31;1m             ^[0m
+ [2m104[0m |         <
+ [2m105[0m |         div className = "sp-sec__inner reveal" >
+ [2m105[0m |         <
+     `----
+
+  [31mx[0m Expression expected
+     ,-[[36;1;4mC:\All Folder\Oracles force\dralejandra\app\alejandra\page.js[0m:100:1]
+ [2m100[0m |         img className = "sp-sec__glow sp-sec__glow--left"
+ [2m101[0m |         src = "/images/degradado-cream.png"
+ [2m102[0m |         alt = ""
+ [2m103[0m |         aria - hidden = "true" / >
+     : [31;1m               ^^^^^^[0m
+ [2m104[0m |         <
+ [2m105[0m |         div className = "sp-sec__inner reveal" >
+ [2m105[0m |         <
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/alejandra/page.js
+ ○ Compiling /_error ...
+ ⨯ ./app/alejandra/page.js
+Error: 
+  [31mx[0m Expression expected
+     ,-[[36;1;4mC:\All Folder\Oracles force\dralejandra\app\alejandra\page.js[0m:100:1]
+ [2m100[0m |         img className = "sp-sec__glow sp-sec__glow--left"
+ [2m101[0m |         src = "/images/degradado-cream.png"
+ [2m102[0m |         alt = ""
+ [2m103[0m |         aria - hidden = "true" / >
+     : [31;1m             ^[0m
+ [2m104[0m |         <
+ [2m105[0m |         div className = "sp-sec__inner reveal" >
+ [2m105[0m |         <
+     `----
+
+  [31mx[0m Expression expected
+     ,-[[36;1;4mC:\All Folder\Oracles force\dralejandra\app\alejandra\page.js[0m:100:1]
+ [2m100[0m |         img className = "sp-sec__glow sp-sec__glow--left"
+ [2m101[0m |         src = "/images/degradado-cream.png"
+ [2m102[0m |         alt = ""
+ [2m103[0m |         aria - hidden = "true" / >
+     : [31;1m               ^^^^^^[0m
+ [2m104[0m |         <
+ [2m105[0m |         div className = "sp-sec__inner reveal" >
+ [2m105[0m |         <
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/alejandra/page.js
+ GET / 500 in 13860ms
+ ⨯ ./app/page.js
+Error: 
+  [31mx[0m Expression expected
+     ,-[[36;1;4mC:\All Folder\Oracles force\dralejandra\app\page.js[0m:164:1]
+ [2m164[0m |             id = "inicio" >
+ [2m165[0m |             <
+ [2m166[0m |             div className = "ticker"
+ [2m167[0m |             aria - hidden = "true" >
+     : [31;1m                 ^[0m
+ [2m168[0m |             <
+ [2m169[0m |             div className = "ticker__track" > {
+ [2m169[0m |                 [0, 1, 2, 3].map((i) => ( <
+     `----
+
+  [31mx[0m Expression expected
+     ,-[[36;1;4mC:\All Folder\Oracles force\dralejandra\app\page.js[0m:164:1]
+ [2m164[0m |             id = "inicio" >
+ [2m165[0m |             <
+ [2m166[0m |             div className = "ticker"
+ [2m167[0m |             aria - hidden = "true" >
+     : [31;1m                   ^^^^^^[0m
+ [2m168[0m |             <
+ [2m169[0m |             div className = "ticker__track" > {
+ [2m169[0m |                 [0, 1, 2, 3].map((i) => ( <
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/page.js
+ ⨯ ./app/page.js
+Error: 
+  [31mx[0m Expression expected
+     ,-[[36;1;4mC:\All Folder\Oracles force\dralejandra\app\page.js[0m:164:1]
+ [2m164[0m |             id = "inicio" >
+ [2m165[0m |             <
+ [2m166[0m |             div className = "ticker"
+ [2m167[0m |             aria - hidden = "true" >
+     : [31;1m                 ^[0m
+ [2m168[0m |             <
+ [2m169[0m |             div className = "ticker__track" > {
+ [2m169[0m |                 [0, 1, 2, 3].map((i) => ( <
+     `----
+
+  [31mx[0m Expression expected
+     ,-[[36;1;4mC:\All Folder\Oracles force\dralejandra\app\page.js[0m:164:1]
+ [2m164[0m |             id = "inicio" >
+ [2m165[0m |             <
+ [2m166[0m |             div className = "ticker"
+ [2m167[0m |             aria - hidden = "true" >
+     : [31;1m                   ^^^^^^[0m
+ [2m168[0m |             <
+ [2m169[0m |             div className = "ticker__track" > {
+ [2m169[0m |                 [0, 1, 2, 3].map((i) => ( <
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/page.js
+ GET /alejandra 500 in 124ms
+ GET /alejandra 500 in 37ms
+ ⨯ ./app/page.js
+Error: 
+  [31mx[0m Expected ';', '}' or <eof>
+   ,-[[36;1;4mC:\All Folder\Oracles force\dralejandra\app\page.js[0m:1:1]
+ [2m1[0m | use client";
+   : [31;1m^|^[0m[33;1m ^^^^^^[0m
+   :  [31;1m`-- [31;1mThis is the expression part of an expression statement[0m[0m
+ [2m2[0m | import Image from "next/image";
+ [2m3[0m | import { useState, useRef, useEffect } from "react";
+ [2m3[0m | 
+   `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/page.js
+ ⨯ ./app/page.js
+Error: 
+  [31mx[0m Expression expected
+     ,-[[36;1;4mC:\All Folder\Oracles force\dralejandra\app\page.js[0m:164:1]
+ [2m164[0m |             id = "inicio" >
+ [2m165[0m |             <
+ [2m166[0m |             div className = "ticker"
+ [2m167[0m |             aria - hidden = "true" >
+     : [31;1m                 ^[0m
+ [2m168[0m |             <
+ [2m169[0m |             div className = "ticker__track" > {
+ [2m169[0m |                 [0, 1, 2, 3].map((i) => ( <
+     `----
+
+  [31mx[0m Expression expected
+     ,-[[36;1;4mC:\All Folder\Oracles force\dralejandra\app\page.js[0m:164:1]
+ [2m164[0m |             id = "inicio" >
+ [2m165[0m |             <
+ [2m166[0m |             div className = "ticker"
+ [2m167[0m |             aria - hidden = "true" >
+     : [31;1m                   ^^^^^^[0m
+ [2m168[0m |             <
+ [2m169[0m |             div className = "ticker__track" > {
+ [2m169[0m |                 [0, 1, 2, 3].map((i) => ( <
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/page.js
+ ✓ Compiled /_error in 1600ms (773 modules)
+ ✓ Compiled in 2.2s (787 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'C:\All Folder\Oracles force\dralejandra\.next\cache\webpack\client-development\14.pack.gz_' -> 'C:\All Folder\Oracles force\dralejandra\.next\cache\webpack\client-development\14.pack.gz'
+ ✓ Compiled in 1382ms (333 modules)
+ ✓ Compiled in 1963ms (773 modules)
+ ✓ Compiled in 1099ms (773 modules)
+ ✓ Compiled in 1877ms (773 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'C:\All Folder\Oracles force\dralejandra\.next\cache\webpack\client-development\0.pack.gz_' -> 'C:\All Folder\Oracles force\dralejandra\.next\cache\webpack\client-development\0.pack.gz'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'C:\All Folder\Oracles force\dralejandra\.next\cache\webpack\server-development\5.pack.gz_' -> 'C:\All Folder\Oracles force\dralejandra\.next\cache\webpack\server-development\5.pack.gz'

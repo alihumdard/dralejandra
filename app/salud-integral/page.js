@@ -50,7 +50,7 @@ export default function MedicinaPredictivaPage() {
         </div>
         <div className="mp-hero__photo">
           <Image
-            src="/images/client-6.png"
+            src="/images/client-6.jpg"
             alt="Dra. Alejandra Stivaletta en su consulta"
             fill
             sizes="(max-width: 1100px) 100vw, 45vw"
@@ -181,7 +181,7 @@ export default function MedicinaPredictivaPage() {
 
       {/* 05 — CTA FINAL */}
       <section className="mp-cta" id="contacto">
-        <img className="mp-cta__bg" src="/images/client-3.png" alt="" aria-hidden="true" />
+        <img className="mp-cta__bg" src="/images/client-3.jpg" alt="" aria-hidden="true" />
         <div className="mp-cta__shade" />
         <img className="mp-cta__glow" src="/images/degradado-cream.png" alt="" aria-hidden="true" />
         <div className="mp-cta__inner reveal">

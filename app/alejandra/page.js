@@ -113,7 +113,7 @@ export default function AlejandraPage() {
 
       {/* CTA */}
       <section className="sp-cta">
-        <img className="sp-cta__bg" src="/images/client-3.png" alt="" aria-hidden="true" />
+        <img className="sp-cta__bg" src="/images/client-3.jpg" alt="" aria-hidden="true" />
         <div className="sp-cta__shade" />
         <img className="sp-cta__glow" src="/images/degradado-cream.png" alt="" aria-hidden="true" />
         <div className="sp-cta__inner reveal">

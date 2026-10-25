@@ -219,12 +219,12 @@ function FAQ({ pregunta, respuesta }) {
             section className = "problem" >
             <
             img className = "problem__bg"
-            src = "/images/client-3.png"
+            src = "/images/client-3.jpg"
             alt = "" / >
             <
             div className = "problem__photo" >
             <
-            img src = "/images/client-3.png"
+            img src = "/images/client-3.jpg"
             alt = "" / >
             <
             /div> <
@@ -458,7 +458,7 @@ function FAQ({ pregunta, respuesta }) {
             <
             div className = "sobre__photo" >
             <
-            img src = "/images/client-3.png"
+            img src = "/images/client-3.jpg"
             alt = "Dra. Alejandra Stivaletta" / >
             <
             /div> <
@@ -475,12 +475,12 @@ function FAQ({ pregunta, respuesta }) {
             p className = "sobre__bio" > Soy Alejandra Stivaletta, médica.Desde muy chica sentí la vocación de cuidar, y con los años esa vocación se transformó en una manera muy personal de ejercer la medicina. < /p> <
             p className = "sobre__bio" > A lo largo de mi recorrido fui entendiendo que la salud no puede abordarse únicamente desde un diagnóstico o un síntoma aislado.Aprendí a mirar al paciente más allá de su enfermedad, comprendiendo que su historia, su entorno, sus hábitos y su forma de vivir también forman parte de su salud. < /p> <
             /div> <
-            div data-sobre-img = "/images/client-2.png" >
+            div data-sobre-img = "/images/client-2.jpg" >
             <
             p className = "sobre__bio" > Entender la salud requiere tiempo, conciencia y la capacidad de encarnar los procesos de cambio.No buscamos soluciones rápidas, sino construir una coherencia biológica y hábitos sostenibles que respeten la historia de cada persona. < /p> <
             p className = "sobre__bio sobre__bio--cite" > & ldquo; No mirar únicamente qué le ocurre a una persona, sino intentar comprender quién es, cómo vive y qué puede estar influyendo en su salud.La salud es conexión. & rdquo; < /p> <
             /div> <
-            div data-sobre-img = "/images/client-4.png" >
+            div data-sobre-img = "/images/client-4.jpg" >
             <
             div className = "sobre__formacion" >
             <

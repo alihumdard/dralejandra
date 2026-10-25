@@ -232,7 +232,7 @@ export default function LongevidadPage() {
         id = "contacto" >
         <
         img className = "mp-cta__bg"
-        src = "/images/client-3.png"
+        src = "/images/client-3.jpg"
         alt = ""
         aria-hidden = "true" / >
         <
