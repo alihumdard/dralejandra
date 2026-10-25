@@ -19,6 +19,7 @@
 
 @media (max-width: 1100px) {
   .longevidad-hero {
+    height: auto;
     grid-template-rows: auto;
   }
   .longevidad-hero .mp-hero__text,
@@ -29,12 +30,12 @@
 
 @media (max-width: 767px) {
   .longevidad-hero .mp-hero__photo {
-    aspect-ratio: unset;
-    min-height: 70vh;
+    aspect-ratio: 1800 / 2200;
     max-height: none;
+    min-height: unset;
   }
   .longevidad-hero .mp-hero__photo img {
-    object-fit: cover;
-    object-position: center 15%;
+    object-fit: contain;
+    object-position: center top;
   }
 }
