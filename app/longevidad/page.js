@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { AREAS } from "../areas";
 import "../medicina-de-precision/medicina.css";
+import "./longevidad.css";
 
 export const metadata = {
     title: "Longevidad | Dra. Alejandra Stivaletta",
@@ -32,7 +33,7 @@ const HREF = "/longevidad";
 export default function LongevidadPage() {
     return ( <
         div className = "mp" > { /* 01 — HERO */ } <
-        section className = "mp-hero"
+        section className = "mp-hero longevidad-hero"
         id = "inicio" >
         <
         img className = "mp-hero__glow"
